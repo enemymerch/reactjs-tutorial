@@ -8,7 +8,15 @@ ReactJS özellikle  tek sayfalık web uygulamalarının kullanıcı arayüzünü
 
 ### React JS nasıl çalışıyor?
 
-ReachJS Virtual DOM adı verilen bir kavram ile çalışıyor ve Virtual DOM sayesinde gerekli değişiklikleri ve parçaların durum güncellemelerini minimum sayıda DOM manipülasyonlarla gerçekleştiriyor.
+ReactJS Virtual DOM adı verilen bir kavram ile çalışıyor ve Virtual DOM sayesinde gerekli değişiklikleri ve parçaların durum güncellemelerini minimum sayıda DOM manipülasyonlarla gerçekleştiriyor.
+
+ReactJS ilk önce değişikliğin nerede yapıldığını buluyor ve sonrasında yapılan değişikliği yorumlayıp gerçekleştiriyor. 
+
+### Biz ne yapıyor olacağız?
+
+Bu tutorial sayesinde ReactJS'in parçalarını, parçaların yaşam döngülerini ve durumlarını, gerçekleşen olayları ve ReacJS'te veri akışının nasıl sağlandığını öğreniyor olacağız. 
+
+Tutorial sonunda MeisterTasak.com ' a benzer basit bir görev yönetimi sayfası hazırlamış olucaağız.
 
 
 
