@@ -25,15 +25,18 @@ Detaylı kurulum için [ github.com/facebookincubator/create-react-app](https://
 HTML sayfasına bu script linklerini ekleyerek ReactJS'i kullanabiliriz.
 
 ```html
+<!-- reactJS'in kendi kütüphanesi -->
 <script src="https://unpkg.com/react@latest/dist/react.js"></script>
 ```
 
 ```html
+<!-- reactJS'in DOM kütüaphanesi -->
 <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
 ```
 
 ```html
-<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></scr
+<!-- JSX'i javascript'e çeviren eden babel kütüphanesi -->
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 ```
 
 
