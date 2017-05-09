@@ -1,5 +1,5 @@
 # Summary
 
 * [Giriş](README.md)
-* [First Chapter](chapter1.md)
+* [Çevreyi Kurmak](chapter1.md)
 

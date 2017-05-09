@@ -12,7 +12,7 @@ ReactJS özellikle  tek sayfalık web uygulamalarının kullanıcı arayüzünü
 
 ### ReactJS nasıl çalışıyor?
 
-ReactJS Virtual DOM adı verilen bir kavram ile çalışıyor ve Virtual DOM sayesinde gerekli değişiklikleri ve parçaların durum güncellemelerini minimum sayıda DOM manipülasyonlarla gerçekleştiriyor.
+ReactJS Virtual DOM adı verilen bir kavram ile çalışıyor ve Virtual DOM sayesinde gerekli değişiklikleri ve bileşenlerin durum güncellemelerini minimum sayıda DOM manipülasyonlarla gerçekleştiriyor.
 
 ReactJS ilk önce değişikliğin nerede yapıldığını buluyor ve sonrasında yapılan değişikliği yorumlayıp gerçekleştiriyor.
 
@@ -21,15 +21,13 @@ ReactJS ilk önce değişikliğin nerede yapıldığını buluyor ve sonrasında
 * **JSX: **JSX Javascript için bir syntax uzantısıdır. 
 * **Bileşenler: **ReactJS işlerini HTML'in elementlerine benzer bir ilişki ile kendi bileşenleriyle yürütüyor.
 
-* **Tek Yönlü Veri Akışı ve Flux: **ReactJS'in bu özellikleriyle veri akışını tek yönlü tutuyor. 
+* **Tek Yönlü Veri Akışı ve Flux: **ReactJS'in bu özellikleriyle veri akışını tek yönlü tutuyor.
 
 ### ReactJS'in avantajları neler?
 
 * ReactJS Virtual DOM kullandığından dolayı, Javascript'in DOM'una göre daha iyi performans sağlıyor.
 * ReactJS sen kullanıcı hemde sunucu tarafında çalışabiliyor.
 * ReactJS bir ön uç için geliştirilmiş bir kütüphane olduğundan dolayı arka uç için istenilen herhangi bir framework kullanılabilir.
-
-
 
 
 
