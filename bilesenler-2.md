@@ -40,3 +40,35 @@ kodumuz çalışmayacaktır. Çünkü bu şekilde createClass method'una 2 tane 
 
 "h1" ve "h3" elementlerini bir "div" elementi altında toplayınca, HTML'in ağaç topoloji yapısından dolayı ana element "div" olmak üzere, kodumuz çalıştı.
 
+
+
+#### Bir ReactJS bileşenini birden fazla kullanmak
+
+Biliyoruz ki oluşturduğumuz ReactJS bileşenlerini ReactDOM.render\(\)
+
+```js
+ReactDOM.render(<Comp />, document.getElementById("example"));
+```
+
+method'u ile sayfanın içine gömüyoruz. Bu kodu şu şekilde değiştirirsek ;
+
+```js
+ReactDOM.render(<Comp /> <Comp /> <Comp /> <Comp />, document.getElementById("example"));
+```
+
+kodumuz çalışmayacaktır. Çünkü ReactDOM.render\(\) method'u da createClass\(\) method'u gibi bir tane ana HTML elementi alıyor parametre olarak ve yukarıdaki kodda dört tane bileşen verdik ve render method'u bunlarla ne yapacağını bilemiyor. Bu durumu kullanmak istediğimiz bileşenleri "div" elementi içerisine koyarak düzeltebiliyoruz. 
+
+şöyle düzeltiyoruz.
+
+```js
+        ReactDOM.render(<div>
+            <Comp />
+            <Comp />
+            <Comp />
+        </div> , document.getElementById("example"));
+```
+
+
+
+İki alt başlıkta da aynı durumun geçerli olmasının sebebi HTML dosyalarının ağaç topolojisi üzerine oturtulmuş olması. Sonuçta oluşturduğumuz ReactJS bileşenleri birer HTML elementinden ibaret ve HTML elementlerinde olduğu gibi ReactJS bileşenleri de birbiri içerisine geçmiş\(node-root yapısı\) bir yapıda olması gerekiyor.
+
