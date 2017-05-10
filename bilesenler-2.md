@@ -2,7 +2,7 @@
 
 Bu başlıkta birden fazla HTML elementini bir ReactJS bileşeninde nasıl kullanıcağımızı görüceğiz.
 
-#### Birden çok HTML elementli ReactJS Bileşeni
+#### Birden çok HTML element içeren ReactJS Bileşeni
 
 Önceki sayfada gördüğümüz üzere
 
