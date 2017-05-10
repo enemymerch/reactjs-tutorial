@@ -39,7 +39,9 @@ HTML sayfasına bu script linklerini ekleyerek ReactJS'i kullanabiliriz.
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 ```
 
+#### 3.Yöntem
 
+Gerekli olan ReactJS dosyalarını bilgisayarınıza indirdikten sonra npm ile oluşturduğunuz projenin altındaki src klasörüne 
 
-
+.js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanmak.
 
