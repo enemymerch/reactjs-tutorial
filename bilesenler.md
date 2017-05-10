@@ -21,8 +21,10 @@ Bileşen oluşturmak için
 kod parçasını kullanacağız. Demoda kullandığımız "div" element'imiz aynı şekilde duruyor. Farklı olarak yaptığımız şey şu;
 
 ```js
-var Bacon
+var Comp
 ```
+
+Comp adında bir değişken oluşturduk. Ama bu bileşeni   " React.createClass\(\);
 
 
 
