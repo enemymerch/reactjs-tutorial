@@ -4,14 +4,22 @@ ReactJS'de oluşturduğumuz ve yönettiğimiz her öge aslında bir bileşen\(co
 
 ### Bileşen oluşturmak
 
-Bileşen oluşturmak için 
+Bileşen oluşturmak için
 
+```html
+    <div id="example"></div>
+    <script type="text/babel">
+
+        var Bacon  = React.createClass({
+            render: function () {
+                return (<h1>This is a Simple compenent!</h1>);
+            }
+        });
+        ReactDOM.render(<Bacon/>, document.getElementById("example"));
+</script>
 ```
-var bileşen = React.createClass();
 
-```
-
-# 
+kod parçasını kullanacağız. 
 
 
 
