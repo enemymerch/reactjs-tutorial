@@ -6,20 +6,22 @@ ReactJS'de oluşturduğumuz ve yönettiğimiz her öge aslında bir bileşen\(co
 
 Bileşen oluşturmak için
 
-```html
-    <div id="example"></div>
+```js
     <script type="text/babel">
-
         var Bacon  = React.createClass({
             render: function () {
                 return (<h1>This is a Simple compenent!</h1>);
             }
         });
         ReactDOM.render(<Bacon/>, document.getElementById("example"));
-</script>
+    </script>
 ```
 
-kod parçasını kullanacağız. 
+kod parçasını kullanacağız. Demoda kullandığımız "div" element'imiz aynı şekilde duruyor. Farklı olarak yaptığımız şey şu;
+
+```js
+var Bacon
+```
 
 
 
