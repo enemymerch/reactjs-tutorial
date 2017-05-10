@@ -41,7 +41,9 @@ HTML sayfasına bu script linklerini ekleyerek ReactJS'i kullanabiliriz.
 
 #### 3.Yöntem
 
-Gerekli olan ReactJS dosyalarını bilgisayarınıza indirdikten sonra npm ile oluşturduğunuz projenin altındaki src klasörüne 
+Gerekli olan ReactJS dosyalarını bilgisayarınıza indirdikten sonra npm ile oluşturduğunuz projenin altındaki src klasörüne
 
 .js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanmak.
+
+Dosyaları buradan indirip projenizin altına ekleyebilirsiniz.
 
