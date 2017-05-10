@@ -24,7 +24,5 @@ kod parçasını kullanacağız. Demoda kullandığımız "div" element'imiz ayn
 var Comp
 ```
 
-Comp adında bir değişken oluşturduk. Ama bu bileşeni   " React.createClass\(\);
-
-
+Comp adında bir değişken oluşturduk. Ama bu bileşeni    _React.createClass\(\) _method'u ile oluşturduk. _createClass\(\) _method'u parametre olarak bir HTML ana element'i alıyor. Ve bir bu HTML elementini _render _ fonksiyonunu kullanarak oluşturduk.
 
