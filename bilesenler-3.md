@@ -29,11 +29,9 @@ ReactDOM.render\(\) method'u içerisinde araba bileşenimizin "marka" ve "model"
 
 Bu kodla beraber üç tane farklı arabamızı kolay bir şekilde "example" idli "div" elementimizin içerisine gömmüş olduk.
 
-
-
 **index.html**
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,8 +61,9 @@ Bu kodla beraber üç tane farklı arabamızı kolay bir şekilde "example" idli
 </script>
 </body>
 </html>
-
 ```
 
+**Sayfamız**
 
+![](assets/props.png)
 
