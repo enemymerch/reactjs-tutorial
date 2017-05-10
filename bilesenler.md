@@ -8,13 +8,14 @@ Bileşen oluşturmak için
 
 ```js
     <script type="text/babel">
-        var Bacon  = React.createClass({
+
+        var Comp  = React.createClass({
             render: function () {
-                return (<h1>This is a Simple compenent!</h1>);
+                return (<h1>Bu bir reactJS bilesenidir!</h1>);
             }
         });
-        ReactDOM.render(<Bacon/>, document.getElementById("example"));
-    </script>
+        ReactDOM.render(<Comp />, document.getElementById("example"));
+</script>
 ```
 
 kod parçasını kullanacağız. Demoda kullandığımız "div" element'imiz aynı şekilde duruyor. Farklı olarak yaptığımız şey şu;
