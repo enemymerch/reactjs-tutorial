@@ -27,7 +27,7 @@ createClass\(\) method'una bir ana HTML elementi vermemiz gerekiyor. Yani kodu b
 
 kodumuz çalışmayacaktır. Çünkü bu şekilde createClass method'una 2 tane alt HTML elementi vermiş olduk ve createClass method'u ikisini beraber kullanamıyor ve ikisinden birisini de seçemiyor. Bu durumu şöyle düzeltiyoruz.
 
-```
+```js
         var Comp  = React.createClass({
             render: function () {
                 return (<div>
@@ -38,5 +38,5 @@ kodumuz çalışmayacaktır. Çünkü bu şekilde createClass method'una 2 tane 
         });
 ```
 
-
+"h1" ve "h3" elementlerini bir "div" elementi altında toplayınca, HTML'in ağaç topoloji yapısından dolayı ana element "div" olmak üzere, kodumuz çalıştı.
 
