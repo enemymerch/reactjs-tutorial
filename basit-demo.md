@@ -10,13 +10,11 @@ Bu başlık altında ilk basit ReactJS kodumuzu yazacağız ve  ReactJS'in bizim
        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
    ```
 
-
-
 kodu HTML sayfasının "head" element'i altına ekliyoruz.
 
-3. "body" elementinin altına bir "div" element'i oluşturuyoruz ve bu element'e "example" id'sini veriyoruz.
+1. "body" elementinin altına bir "div" element'i oluşturuyoruz ve bu element'e "example" id'sini veriyoruz.
 
-4. Son olarakta 
+2. Son olarakta
 
 ```html
     <script type="text/babel">
@@ -30,15 +28,13 @@ kod parçasını "body" element'inin altına yerleştiriyoruz. Script type'ın "
 ReactDOM.render(<h1>Hello ReactJS</h1>, document.getElementById("example"));
 ```
 
-render method'u ile yaptımız işlem ise, "body" element'inin  altında oluşturduğumuz "example" id'li "div" elementine erişip, "div" elementinin altına 
+render method'u ile yaptımız işlem ise, "body" element'inin  altında oluşturduğumuz "example" id'li "div" elementine erişip, "div" elementinin altına
 
 ```html
 <h1>Hello ReactJS</h1>
 ```
 
-bir "h1" elementi eklemek. 
-
-
+bir "h1" elementi eklemek.
 
 **index.html**
 
@@ -53,7 +49,7 @@ bir "h1" elementi eklemek.
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
 <body>
-    <div id="exampe"></div>
+    <div id="example"></div>
     <script type="text/babel">
         ReactDOM.render(<h1>Hello ReactJS</h1>, document.getElementById("example"));
     </script>
@@ -62,7 +58,5 @@ bir "h1" elementi eklemek.
 
 ```
 
-
-
-
+Bu sayfayı açtığımızda göreceğimiz sayfa
 
