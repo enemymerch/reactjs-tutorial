@@ -5,4 +5,5 @@
 * [Basit Demo](basit-demo.md)
 * [Bileşenler 1](bilesenler.md)
 * [Bileşenler 2](bilesenler-2.md)
+* [Bileşenler 3](bilesenler-3.md)
 
