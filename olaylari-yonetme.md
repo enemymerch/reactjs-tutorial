@@ -52,5 +52,49 @@ Son olarak ReactDOM.render\(\) method'unu kullanmamız gerekiyor.
     </div>, document.getElementById("container"));
 ```
 
+**index.html**
 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/react.min.js"></script>
+    <script src="../js/react-dom.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+
+<script type="text/babel">
+
+    var Task = React.createClass({
+        edit: function () {
+          alert("Task'ı düzenle.");
+        },
+        remove: function () {
+            alert("Task'ı sil.")
+        },
+        render: function () {
+            return (
+                    <div className="commentContainer">
+                        <div>Bizim görevimiz!</div>
+                        <button onClick={this.edit} className="button-primary">Edit</button>
+                        <button onClick={this.remove} className="button-danger">Remove</button>
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(<div className="board">
+        <Task/>
+    </div>, document.getElementById("container"));
+</script>
+</body>
+</html>
+
+```
+
+**Sayfamız\(Edit buton'una tıklanmış hali\)**![](/assets/editAlert.png)
 
