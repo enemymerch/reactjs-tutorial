@@ -2,7 +2,7 @@
 
 Bu başlıkta ReactJS de olayları yönetmekten bahsediyor olacağız. Projeye ayrı olarak css dosyası eklendim. Dosyayı [buradan ](https://drive.google.com/drive/folders/0BxLeFDQhe16BdG4wcFpySU51UHc?usp=sharing)indirip projenize ekleyebilirsiniz.
 
-İlk önce Task adında bir bileşen oluşturacağız ve bu bileşenin iki tane button'ı olucak.
+İlk önce Task adında bir bileşen oluşturacağız ve bu bileşenin iki tane butonu olacak.
 
 ```js
     var Task = React.createClass({
@@ -18,5 +18,7 @@ Bu başlıkta ReactJS de olayları yönetmekten bahsediyor olacağız. Projeye a
     });
 ```
 
+Kodda gördüğümüz üzere bu iki buton tıklanıldığında "edit" ve "remove" adında iki fonksiyonu çağırıyor.
 
+Bu iki fonksiyonuda kodumuza eklememiz gerekiyor.
 
