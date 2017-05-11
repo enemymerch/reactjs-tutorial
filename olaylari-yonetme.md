@@ -22,7 +22,7 @@ Kodda gördüğümüz üzere bu iki buton tıklanıldığında "edit" ve "remove
 
 Bu iki fonksiyonuda kodumuza eklememiz gerekiyor.
 
-```
+```js
     var Task = React.createClass({
         edit: function () {
           alert("Task'ı düzenle.");
@@ -40,6 +40,16 @@ Bu iki fonksiyonuda kodumuza eklememiz gerekiyor.
             );
         }
     });
+```
+
+Şu anlık butonlar sadece alert görevini yerine getiriyorlar ama ilerleyen başlıklarda Task Management sayfamız için gerekli olacaklar.
+
+Son olarak ReactDOM.render\(\) method'unu kullanmamız gerekiyor.
+
+```js
+    ReactDOM.render(<div className="board">
+        <Task/>
+    </div>, document.getElementById("container"));
 ```
 
 
