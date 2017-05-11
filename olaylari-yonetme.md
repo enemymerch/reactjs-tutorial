@@ -124,5 +124,5 @@ En son olarak yapacağımız, görevimizin Text kısmını dinamik olarak deği�
 
 **Sayfamız \(Dinamik Text\)**![](/assets/dinamikEdit.png)
 
-![](/assets/dinamikEdit.png)
+
 
