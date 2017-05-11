@@ -22,3 +22,25 @@ Kodda gördüğümüz üzere bu iki buton tıklanıldığında "edit" ve "remove
 
 Bu iki fonksiyonuda kodumuza eklememiz gerekiyor.
 
+```
+    var Task = React.createClass({
+        edit: function () {
+          alert("Task'ı düzenle.");
+        },
+        remove: function () {
+            alert("Task'ı sil.")
+        },
+        render: function () {
+            return (
+                    <div className="commentContainer">
+                        <div>Bizim görevimiz!</div>
+                        <button onclick="edit" className="button-primary">Edit</button>
+                        <button onclick="remove" className="button-danger">Remove</button>
+                    </div>
+            );
+        }
+    });
+```
+
+
+
