@@ -99,7 +99,7 @@ Son olarak ReactDOM.render\(\) method'unu kullanmamız gerekiyor.
 
 En son olarak yapacağımız, görevimizin Text kısmını dinamik olarak değiştirmek. Şu ana kadar verilmiş kodda Task'ımızın Text kısmı statik ve değişmiyor. Yapmamız gereken kodumuzu biraz değiştirmek ve Text'imizi bileşenin children'ı olarak ReactDOM.render\(\) method'unda vermek.
 
-```
+```js
     var Task = React.createClass({
         edit: function () {
           alert("Task'ı düzenle.");
@@ -122,5 +122,7 @@ En son olarak yapacağımız, görevimizin Text kısmını dinamik olarak deği�
     </div>, document.getElementById("container"));
 ```
 
+**Sayfamız \(Dinamik Text\)**![](/assets/dinamikEdit.png)
 
+![](/assets/dinamikEdit.png)
 
