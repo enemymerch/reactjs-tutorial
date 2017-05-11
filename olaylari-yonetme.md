@@ -93,8 +93,34 @@ Son olarak ReactDOM.render\(\) method'unu kullanmamız gerekiyor.
 </script>
 </body>
 </html>
-
 ```
 
-**Sayfamız\(Edit buton'una tıklanmış hali\)**![](/assets/editAlert.png)
+**Sayfamız\(Edit buton'una tıklanmış hali\)**![](assets/editAlert.png)
+
+En son olarak yapacağımız, görevimizin Text kısmını dinamik olarak değiştirmek. Şu ana kadar verilmiş kodda Task'ımızın Text kısmı statik ve değişmiyor. Yapmamız gereken kodumuzu biraz değiştirmek ve Text'imizi bileşenin children'ı olarak ReactDOM.render\(\) method'unda vermek.
+
+```
+    var Task = React.createClass({
+        edit: function () {
+          alert("Task'ı düzenle.");
+        },
+        remove: function () {
+            alert("Task'ı sil.")
+        },
+        render: function () {
+            return (
+                    <div className="commentContainer">
+                        <div className="commentText">{this.props.children}</div>
+                        <button onClick={this.edit} className="button-primary">Edit</button>
+                        <button onClick={this.remove} className="button-danger">Remove</button>
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(<div className="board">
+        <Task>Dinamik Textli Görevimiz!</Task>
+    </div>, document.getElementById("container"));
+```
+
+
 
