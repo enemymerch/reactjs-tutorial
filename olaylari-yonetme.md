@@ -9,9 +9,9 @@ Bu başlıkta ReactJS de olayları yönetmekten bahsediyor olacağız. Projeye a
         render: function () {
             return (
                     <div className="commentContainer">
-                        <div>Bu bizim görevimiz!</div>
-                        <button className="button-primary">Edit</button>
-                        <button className="button-danger">Remove</button>
+                        <div>Bizim görevimiz!</div>
+                        <button onclick="edit" className="button-primary">Edit</button>
+                        <button onclick="remove" className="button-danger">Remove</button>
                     </div>
             );
         }
