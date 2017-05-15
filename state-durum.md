@@ -169,5 +169,9 @@ Ama bu fonksiyonu yazmadan önce bir önceki başlıkta gördüğümüz olay yö
 </html>
 ```
 
+**Sonuç **
 
+![](assets/state2.png)
+
+Sonuç olarak  checbox bileşenimizin içerisindeki "h3"  elementinin metni bileşenimizin "checked" state'ine göre değişiyor.  
 
