@@ -23,7 +23,7 @@ Bir tane checkbox bileşeni oluşturmayla işe başlayalım.
     );
 ```
 
-Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" ile ulaşıyoruz ve üstteki kodda "checked" isimli bir state'imiz var. Ama state'in bir ilk değeri yok ve bileşlen ilk kez render edilmeden önce state'i bir variable atamamız gerekicek. Bunuda "getInitialState" fonksiyonu ile yapıyoruz.
+Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" ile ulaşıyoruz ve üstteki kodda "checked" isimli bir state'imiz var. Ama state'in bir ilk değeri yok ve bileşlerin ilk kez render edilmeden önce state'i bir variable atamamız gerekicek. Bunuda "getInitialState" fonksiyonu ile yapıyoruz.
 
 ```js
     var CheckBox = React.createClass({
@@ -51,6 +51,4 @@ Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" 
 ```
 
 "getInitialState" methodu ile isteğimiz kadar state'i atayabiliriz. Ama şu an ihtiyacımız olan sadece "checked" state'ini atamak.
-
-
 
