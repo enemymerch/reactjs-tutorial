@@ -52,3 +52,59 @@ Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" 
 
 "getInitialState" methodu ile isteğimiz kadar state'i atayabiliriz. Ama şu an ihtiyacımız olan sadece "checked" state'ini atamak.
 
+**index.html**
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/react.min.js"></script>
+    <script src="../js/react-dom.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+
+<script type="text/babel">
+
+
+    var CheckBox = React.createClass({
+        getInitialState: function () {
+            return({
+                checked: false
+            });
+        },
+        render: function () {
+            var msg;
+            if(this.state.checked){
+                msg = 'tıklı'
+            }else{
+                msg = 'tıklı degil'
+            }
+            return(
+                    <div>
+                        <input type="checkbox"/>
+                        <h3>{msg}</h3>
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(<CheckBox/>, document.getElementById('container'));
+</script>
+</body>
+</html>
+```
+
+**Sonuç**
+
+![](assets/state1.png)
+
+// TODO:
+
+
+
+
+
