@@ -47,5 +47,31 @@ Kaldığımız yer;
 
 Hatırladığımız üzere üst kısımdaki kodda "edit" ve "delete" butonlarına bastığımızda sayfada herhangi bir değişiklik olmuyor; sadece "alert\(\)" methodu çağrılıyordu. Bu başlıkta yapacağımız değişiklikler ile Task bileşenimizin içerisindeki text'i "edit" tuşuyla değiştirebileceğiz.
 
-Bileşenimize bir state ekleyeceğiz ve bu state text'imizin edit ya da normal modda olup olmadığını gösterecek. Bizde 
+Bileşenimize bir state ekleyeceğiz ve bu state text'imizin edit ya da normal modda olup olmadığını gösterecek. Bizde state'imizin durumuna göre bileşenimizi update edeceğiz.
+
+İlk önce "editing" adında bir state ekliyoruz bileşenimize.
+
+```js
+        getInitialState: function () {
+            return(
+                {editing: false}
+            );
+        }
+```
+
+"editing" state'imize initial değerini verdikten sonra yapacağımız değişiklik "edit" fonksiyonunu değiştirmek olacak.
+
+```js
+        edit: function () {
+            this.setState({
+                editing: true
+            });
+        }
+```
+
+Şimdi "edit" fonksiyonu artık "alert\(\)"  methodunu çağırmıyor, daha önce oluştuduğumuz "editing" state'inin değerini "true"ya atıyor. Peki "edit" butonuna bastıktan textimizi değiştirebilmek için bir "textarea" elementine ihitacımız olacak. 
+
+"editMode" ve "normalMode" adında iki tane yeni fonksiyon oluşturacağız."editMode" fonksiyonu "editing" state'i true olduğunda gösterilecek bir html kodu döndürecek ve "normalMode"  fonksiyonu "editing" state'i false olduğunda gösterilecek html kodunu döndürecek. Ama biliyoruz ki değişiklikleri kontrol eden, olmazsa olmaz varsayılan fonksiyonumuz "render" fonksiyonu. Bu nedenden dolayı render fonksiyonunu'da  da değişikliş yapmamız gerekiyor. 
+
+
 
