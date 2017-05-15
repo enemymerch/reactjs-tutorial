@@ -5,7 +5,8 @@ Bu başlık altında bileşenlerin statelerinden bahsedeceğiz. Stateler bileşe
 Bir tane checkbox bileşeni oluşturmayla işe başlayalım.
 
 ```js
-        render: function () {
+       var CheckBox = React.createClass({
+          render: function () {
             var msg;
             if(this.state.checked){
                 msg = 'tıklı'
@@ -19,7 +20,8 @@ Bir tane checkbox bileşeni oluşturmayla işe başlayalım.
                     </div>
             );
         }
+    );
 ```
 
-Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" ile ulaşıyoruz.
+Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" ile ulaşıyoruz. Ama şu an ki render funksiyonu
 
