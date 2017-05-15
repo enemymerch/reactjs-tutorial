@@ -50,5 +50,5 @@ Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" 
     ReactDOM.render(<CheckBox/>, document.getElementById('container'));
 ```
 
-"getInitialState" methodu ile isteğimiz kadar state'i atayabiliriz.
+"getInitialState" methodu ile isteğimiz kadar state'i atayabiliriz. Ama şu an ihtiyacımız olan sadece "checked" state'ini atamak.
 
