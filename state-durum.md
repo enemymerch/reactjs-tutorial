@@ -173,5 +173,5 @@ Ama bu fonksiyonu yazmadan önce bir önceki başlıkta gördüğümüz olay yö
 
 ![](assets/state2.png)
 
-Sonuç olarak  checbox bileşenimizin içerisindeki "h3"  elementinin metni bileşenimizin "checked" state'ine göre değişiyor. ReactJS'in en iyi olduğu konulardan biride bu değişiklikleri VirtualDOM ile çalışmasından dolayı normal javascript koduna göre çok daha efektif bir yol ile yapabiliyor olması.
+Sonuç olarak  checbox bileşenimizin içerisindeki "h3"  elementinin metni bileşenimizin "checked" state'ine göre değişiyor. ReactJS'in en iyi olduğu konulardan biride bu değişiklikleri VirtualDOM ile çalışmasından dolayı normal Javascript koduna göre çok daha efektif bir yol ile yapabiliyor olması.
 
