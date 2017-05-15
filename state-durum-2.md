@@ -71,7 +71,7 @@ Bileşenimize bir state ekleyeceğiz ve bu state text'imizin edit ya da normal m
 
 Şimdi "edit" fonksiyonu artık "alert\(\)"  methodunu çağırmıyor, daha önce oluştuduğumuz "editing" state'inin değerini "true"ya atıyor. "edit" butonuna bastıktan sonra textimizi değiştirebilmek için bir "textarea" elementine ihitacımız olacak. Yani iki ayrı html koduna ihtiyacımız olacak ama şu an ki "render" fonksiyonumuz bir tane html kodu döndürüyor. Bu nedenden dolayı "editMode" ve "normalMode" adında iki tane yeni fonksiyon oluşturacağız."editMode" fonksiyonu "editing" state'i true olduğunda gösterilecek bir html kodu döndürecek ve "normalMode"  fonksiyonu "editing" state'i false olduğunda gösterilecek html kodunu döndürecek. Ama biliyoruz ki değişiklikleri kontrol eden, olmazsa olmaz varsayılan fonksiyonumuz "render" fonksiyonu. Bu nedenden dolayı render fonksiyonunu'da  da değişiklik yapmamız gerekiyor.
 
-"editingMode" fonksiyonu
+"editingMode" fonksiyonu:
 
 ```js
         editingMode: function () {
@@ -83,6 +83,8 @@ Bileşenimize bir state ekleyeceğiz ve bu state text'imizin edit ya da normal m
             );
         }
 ```
+
+"editingMode" fonksiyonu istediğimiz şekilde bir "save" butonu ve "textarea" elementi içeriyor ve bu "textarea" elementinin içerisinde de bileşenin children'i olarak aldığımız değer var. "save" butonuda "save" adında bir fonksiyonu çağırıyor ve bu fonksiyon da "editing" state'imizi false'a set edecek.
 
 "normalMode" fonksiyonu
 
