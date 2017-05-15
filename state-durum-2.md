@@ -45,5 +45,7 @@ Kaldığımız yer;
 </html>
 ```
 
-Hatırladığımız üzere üst kısımdaki kodda "edit" ve "delete" butonlarına bastığımızda sayfada herhangi bir değişiklik olmuyor; sadece "alert\(\)" methodu çağrılıyordu. Bu başlıkta yapacağımız değişiklikler ile Task bileşenimizin içerisindeki text'i "edit" tuşuyla değiştirebileceğiz ve "delete" tuşuyla tamamen silebileceğiz.
+Hatırladığımız üzere üst kısımdaki kodda "edit" ve "delete" butonlarına bastığımızda sayfada herhangi bir değişiklik olmuyor; sadece "alert\(\)" methodu çağrılıyordu. Bu başlıkta yapacağımız değişiklikler ile Task bileşenimizin içerisindeki text'i "edit" tuşuyla değiştirebileceğiz.
+
+Bileşenimize bir state ekleyeceğiz ve bu state text'imizin edit ya da normal modda olup olmadığını gösterecek.
 
