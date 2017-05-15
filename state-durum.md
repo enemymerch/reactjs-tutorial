@@ -102,9 +102,21 @@ Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" 
 
 ![](assets/state1.png)
 
-// TODO:
+Şu ana kadar checkbox bileşenimizi ve "checked" isimli bir state oluşturduk. Ama checkbox'a tıkladığımızda yazımızda her hangi bir değişiklik olamayacak çünkü state'imizi değiştirecek bir kod yazmadık. Şimdi de stateimizi değiştirecek bir fonksiyon yazalım.
 
+Ama bu fonksiyonu yazmadan önce bir önceki başlıkta gördüğümüz olay yönetme taktiğini kullanacağız. Kullandığımız checkbox bilelenini içerisinde bir "input" elementi var ve biz  bu elementte bir değişiklik olduğunda stateimizi değiştirmek istiyoruz. 
 
+```js
+<input type="checkbox" onChange={this.checkboxStateChange} defaultChecked={this.state.checked}/>
+```
 
+"input" elementimizin "onChange" özelliğini "this.checkboxStateChange" methoduna atadık ve şimdi bu method'u yazmamız gerekiyor.
 
+```js
+        checkboxStateChange: function () {
+            this.setState({checked: !this.state.checked })
+        }
+```
+
+"this.setState\(\)" method'u ile istediğimiz stateimizi yeniden atayabiliyoruz ve burda yapmak istediğimiz şey; eğer "checked" state'imizi her zaman kendinin tersine atamak. Yani "true" ise "false" yapsak, "false" ise "true" yapmak.
 
