@@ -120,11 +120,9 @@ Ama bu fonksiyonu yazmadan önce bir önceki başlıkta gördüğümüz olay yö
 
 "this.setState\(\)" method'u ile istediğimiz state'imizi yeniden atayabiliyoruz ve burda yapmak istediğimiz şey; eğer "checked" state'imizi her zaman kendinin tersine atamak. Yani "true" ise "false" yapsak, "false" ise "true" yapmak.
 
-
-
 **index.html**
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -169,7 +167,6 @@ Ama bu fonksiyonu yazmadan önce bir önceki başlıkta gördüğümüz olay yö
 </script>
 </body>
 </html>
-
 ```
 
 
