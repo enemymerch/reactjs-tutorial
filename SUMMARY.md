@@ -7,4 +7,5 @@
 * [Bileşenler 2](bilesenler-2.md)
 * [Bileşenler 3](bilesenler-3.md)
 * [Olayları Yönetme](olaylari-yonetme.md)
+* [State\( Durum \)](state-durum.md)
 
