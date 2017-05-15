@@ -69,9 +69,34 @@ Bileşenimize bir state ekleyeceğiz ve bu state text'imizin edit ya da normal m
         }
 ```
 
-Şimdi "edit" fonksiyonu artık "alert\(\)"  methodunu çağırmıyor, daha önce oluştuduğumuz "editing" state'inin değerini "true"ya atıyor. Peki "edit" butonuna bastıktan textimizi değiştirebilmek için bir "textarea" elementine ihitacımız olacak. 
+Şimdi "edit" fonksiyonu artık "alert\(\)"  methodunu çağırmıyor, daha önce oluştuduğumuz "editing" state'inin değerini "true"ya atıyor. "edit" butonuna bastıktan sonra textimizi değiştirebilmek için bir "textarea" elementine ihitacımız olacak. Yani iki ayrı html koduna ihtiyacımız olacak ama şu an ki "render" fonksiyonumuz bir tane html kodu döndürüyor. Bu nedenden dolayı "editMode" ve "normalMode" adında iki tane yeni fonksiyon oluşturacağız."editMode" fonksiyonu "editing" state'i true olduğunda gösterilecek bir html kodu döndürecek ve "normalMode"  fonksiyonu "editing" state'i false olduğunda gösterilecek html kodunu döndürecek. Ama biliyoruz ki değişiklikleri kontrol eden, olmazsa olmaz varsayılan fonksiyonumuz "render" fonksiyonu. Bu nedenden dolayı render fonksiyonunu'da  da değişiklik yapmamız gerekiyor.
 
-"editMode" ve "normalMode" adında iki tane yeni fonksiyon oluşturacağız."editMode" fonksiyonu "editing" state'i true olduğunda gösterilecek bir html kodu döndürecek ve "normalMode"  fonksiyonu "editing" state'i false olduğunda gösterilecek html kodunu döndürecek. Ama biliyoruz ki değişiklikleri kontrol eden, olmazsa olmaz varsayılan fonksiyonumuz "render" fonksiyonu. Bu nedenden dolayı render fonksiyonunu'da  da değişikliş yapmamız gerekiyor. 
+"editingMode" fonksiyonu
+
+```js
+        editingMode: function () {
+            return (
+                    <div className="commentContainer">
+                        <textarea defaultValue={this.props.children}></textarea>
+                        <button onClick={this.save} className="button-secondary">Save</button>
+                    </div>
+            );
+        }
+```
+
+"normalMode" fonksiyonu
+
+```js
+        normalMode: function () {
+            return (
+                    <div className="commentContainer">
+                        <div className="commentText">{this.props.children}</div>
+                        <button onClick={this.edit} className="button-primary">Edit</button>
+                        <button onClick={this.remove} className="button-danger">Remove</button>
+                    </div>
+            );
+        }
+```
 
 
 
