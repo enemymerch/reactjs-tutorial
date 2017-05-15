@@ -42,7 +42,7 @@ Bu iki fonksiyonuda kodumuza eklememiz gerekiyor.
     });
 ```
 
-Şu anlık butonlar sadece alert görevini yerine getiriyorlar ama ilerleyen başlıklarda Task Management sayfamız için gerekli olacaklar.
+ReactJS'te olayları yönetmenin bir çok yöntemi var. Şu an ihtiyacımız olan butonları yönetmek. Şu anlık butonlar sadece alert görevini yerine getiriyorlar ama ilerleyen başlıklarda Task Management sayfamız için gerekli olacaklar.
 
 Son olarak ReactDOM.render\(\) method'unu kullanmamız gerekiyor.
 
@@ -123,6 +123,4 @@ En son olarak yapacağımız, görevimizin Text kısmını dinamik olarak deği�
 ```
 
 **Sayfamız \(Dinamik Text\)**![](/assets/dinamikEdit.png)
-
-
 
