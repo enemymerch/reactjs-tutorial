@@ -120,3 +120,57 @@ Ama bu fonksiyonu yazmadan önce bir önceki başlıkta gördüğümüz olay yö
 
 "this.setState\(\)" method'u ile istediğimiz state'imizi yeniden atayabiliyoruz ve burda yapmak istediğimiz şey; eğer "checked" state'imizi her zaman kendinin tersine atamak. Yani "true" ise "false" yapsak, "false" ise "true" yapmak.
 
+
+
+**index.html**
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/react.min.js"></script>
+    <script src="../js/react-dom.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+
+<script type="text/babel">
+
+
+    var CheckBox = React.createClass({
+        getInitialState: function () {
+            return({
+                checked: false
+            });
+        },
+        checkboxStateChange: function () {
+            this.setState({checked: !this.state.checked })
+        },
+        render: function () {
+            var msg;
+            if(this.state.checked){
+                msg = 'tıklı'
+            }else{
+                msg = 'tıklı degil'
+            }
+            return(
+                    <div>
+                        <input type="checkbox" onChange={this.checkboxStateChange} defaultChecked={this.state.checked}/>
+                        <h3>{msg}</h3>
+                    </div>
+            );
+        }
+    });
+    ReactDOM.render(<CheckBox/>, document.getElementById('container'));
+</script>
+</body>
+</html>
+
+```
+
+
+
