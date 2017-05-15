@@ -86,6 +86,16 @@ Bileşenimize bir state ekleyeceğiz ve bu state text'imizin edit ya da normal m
 
 "editingMode" fonksiyonu istediğimiz şekilde bir "save" butonu ve "textarea" elementi içeriyor ve bu "textarea" elementinin içerisinde de bileşenin children'i olarak aldığımız değer var. "save" butonuda "save" adında bir fonksiyonu çağırıyor ve bu fonksiyon da "editing" state'imizi false'a set edecek.
 
+"save" fonksiyonu:
+
+```js
+        save: function () {
+            this.setState({
+                editing: false
+            })
+        }
+```
+
 "normalMode" fonksiyonu
 
 ```js
