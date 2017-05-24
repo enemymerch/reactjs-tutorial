@@ -2,7 +2,7 @@
 
 Bu tutorial sayesinde ReactJS'in parçalarını, parçaların yaşam döngülerini ve durumlarını, gerçekleşen olayları ve ReacJS'te veri akışının nasıl sağlandığını öğreniyor olacağız.
 
-Tutorial sonunda [MeisterTasak.com](https://www.meistertask.com/) ' a benzer basit bir görev yönetimi sayfası hazırlamış olucaağız.
+Tutorial sonunda [MeisterTask.com](https://www.meistertask.com/) ' a benzer basit bir görev yönetimi sayfası hazırlamış olucaağız.
 
 ### ReactJS nedir?
 
