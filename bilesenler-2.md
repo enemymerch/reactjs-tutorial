@@ -1,4 +1,4 @@
-# Bileşenler 2
+# Bileşenler 2 \(Multiple Elements\)
 
 Bu başlıkta birden fazla HTML elementini bir ReactJS bileşeninde nasıl kullanıcağımızı görüceğiz.
 

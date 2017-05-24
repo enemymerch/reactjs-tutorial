@@ -4,7 +4,7 @@
 * [Çevreyi Kurmak](chapter1.md)
 * [Basit Demo](basit-demo.md)
 * [Bileşenler 1](bilesenler.md)
-* [Bileşenler 2](bilesenler-2.md)
+* [Bileşenler 2 \(Multiple Elements\)](bilesenler-2.md)
 * [Bileşenler 3 \(Props\)](bilesenler-3.md)
 * [Olayları Yönetme](olaylari-yonetme.md)
 * [State\(Durum\) 1](state-durum.md)
