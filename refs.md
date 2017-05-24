@@ -23,25 +23,21 @@ Textarea'ya yazdığımız yeni yazıyı keyıt edebilememiz için;
 
 textarea element'ine ulaşmamız gerekiyor. Bunu kolaylıkla element'e _**id **ekleyerek yapabiliriz. Ama biliyoruz ki birden fazla textarea'mız olacak ve böyle bir durumda bütün textarealar'ın _**id**_'si aynı olmuş olacak. Bütün textareaların _**id**_'si aynı olursa da biz istenilen textarea'ya ulaşmamız imkansız duruma gelecek. Bu sorunu ReactJS'nin _**refs\(referans\) **'i ile çözeceğiz.
 
-ReactJS'in refs'lerini html elementlerinin bir özelliğiymiş gibi html kodunun içerisine yazıyoruz.
+ReactJS'in refs'lerini html ei defaultValue={this.props.children}&gt;&lt;/textarea&gt;
 
-```html
-<textarea ref="yeniYazı" defaultValue={this.props.children}></textarea>
-```
-
-Şimdi, textarea element'imize _**ref **_özelliğini ekledik. Bundan sonra yapmamız gereken şey ise _**save **_fonksiyonunu değiştirmek olacak. 
+Şimdi, textarea element'imize _**ref **_özelliğini ekledik. Bundan sonra yapmamız gereken şey ise \_**save **\_fonksiyonunu değiştirmek olacak.
 
 Eski save fonksiyonu;
 
-```
+```js
         save: function () {
-            var yeniText = this.refs.yeniYazı.value;
-
             this.setState({
                 editing: false
             })
         }
 ```
+
+Bu fonksiyonumuzda yaptığımız tek şey _**editing **_state'imizi false yapmaktı. Ama yeni yazılan text', kayıt edebilmemiz için _**textarea **_element'ine ulaşmamız gerekiyor. Üst kısımda textarea elementimize _**ref="yaziAlani**_
 
 
 
