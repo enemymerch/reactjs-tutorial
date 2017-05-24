@@ -28,5 +28,5 @@ var TaskBoard = React.createClass({
 
 Şimdi yapmamız gereken ise, _**TaskBoard**_ bileşenini kullanabilmemiz için, bu bileşenin render fonksiyonunu oluşturmak olacak.
 
- TaskBoard bileşenin içerisinde Task bileşenlerini tutan bir dizimiz\("tasks"\) var. render fonksiyonunda yapmak istediğimiz de, bu dizideki bileşenleri render fonsiyonu ile return edebilmek.
+TaskBoard bileşenin içerisinde Task bileşenlerini tutan bir dizimiz\("tasks"\) var. render fonksiyonunda yapmak istediğimiz de, bu dizideki bileşenleri render fonksiyonu ile return edebilmek.
 
