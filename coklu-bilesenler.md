@@ -88,9 +88,11 @@ function (task, i) {
 }
 ```
 
-**task** ve **i **adında iki tane parametre alıyor. 
+**taskText **ve **i **adında iki tane parametre alıyor. taskText parametresi **tasks **dizisindeki değişken'e , **i** parametresi de her değişkenin index'îne denk geliyor.
 
-ReactDOM.render fonksiyonun'un içerisine Task bileşeni yerine TaskBoard bileşenini vereceğiz artık.
+
+
+Bundan sonra yapmamız gereken; ReactDOM.render fonksiyonun'un içerisine Task bileşeni yerine TaskBoard bileşenini vermek.
 
 ```js
  ReactDOM.render(<TaskBoard/>, document.getElementById("container"));
