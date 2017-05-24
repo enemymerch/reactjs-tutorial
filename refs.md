@@ -57,3 +57,87 @@ Bu fonksiyonumuzda yaptığımız tek şey _**editing **\_state'imizi false yapm
 
 Yeni save fonksiyomuz ile referans verdiğimiz element'imize \_**this.refs.{referans} **ile ulaşabiliyoruz. Bizim durumumuzda textarea'nın değerini almamız gerekiyor. Textarea'nın value'suna da **this.refs.yaziAlani.value**  kod parçası ile erişebildik. Ve sonuç olarak yazılan yeni yazıyı **alert**\(\) method'u ile ekranda gösterebildik.
 
+**index.html**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="../js/react.min.js"></script>
+    <script src="../js/react-dom.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+
+<script type="text/babel">
+
+    var Task = React.createClass({
+        getInitialState: function () {
+            return(
+                {editing: false}
+            );
+        },
+        edit: function () {
+            this.setState({
+                editing: true
+            });
+        },
+        remove: function () {
+            alert("Task'ı sil.")
+        },
+        save: function () {
+            var yeniText = this.refs.yaziAlani.value;
+            alert(yeniText)
+            this.setState({
+                editing: false
+            })
+        },
+        normalMode: function () {
+            return (
+                    <div className="commentContainer">
+                        <div className="commentText">{this.props.children}</div>
+                        <button onClick={this.edit} className="button-primary">Edit</button>
+                        <button onClick={this.remove} className="button-danger">Remove</button>
+                    </div>
+            );
+        },
+        editingMode: function () {
+            return (
+                    <div className="commentContainer">
+                        <textarea ref="yaziAlani" defaultValue={this.props.children}></textarea>
+                        <button onClick={this.save} className="button-secondary">Save</button>
+                    </div>
+            );
+        },
+        render: function () {
+            if(this.state.editing){
+                return this.editingMode();
+            }else{
+                return this.normalMode();
+            }
+        }
+    });
+    ReactDOM.render(<div className="board">
+        <Task>Dinamik Textli Görevimiz!</Task>
+    </div>, document.getElementById("container"));
+</script>
+</body>
+</html>
+```
+
+
+
+**Sonuç**
+
+Edit buton'una basıp yeni bir yazı giriyoruz ve sonrasında Save buton'una basıyoruz.
+
+![](/assets/Refs.png)Tamam'a bastıktan sonra;
+
+![](/assets/Refs2.png)
+
+Sonuç olarak ReactJS refs 'i kullanarak html element'imize eriştik. Ama hala yeni yazımızı kayıt edebilir hale gelemedik. İlerki başlıklarda bu sorun'un üzerinde duracağız.
+
