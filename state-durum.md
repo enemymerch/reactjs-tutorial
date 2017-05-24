@@ -54,7 +54,7 @@ Bileşenlerin statelerine, özelliklerine oluşatuğimız şekilde "this.state" 
 
 **index.html**
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
