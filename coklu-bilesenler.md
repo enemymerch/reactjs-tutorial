@@ -30,3 +30,55 @@ var TaskBoard = React.createClass({
 
 TaskBoard bileşenin içerisinde Task bileşenlerini tutan bir dizimiz\("tasks"\) var. render fonksiyonunda yapmak istediğimiz de, bu dizideki bileşenleri return edebilmek.
 
+Başlangıç olarak bileşenlerimizi bir _**div **_elementinin içerisinde toplamamız gerekiyor.
+
+```js
+    var TaskBoard = React.createClass({
+        getInitialState: function () {
+            return{
+                tasks: [
+                    'Task 1',
+                    'Task 2',
+                    'Task 3'
+                ]
+            }
+        },
+        render: function () {
+            return (
+                    <div className="board">
+                        
+                    </div>
+            );
+        }
+    });
+```
+
+Şimdi ise, _**tasks**_ dizisinden stringleri çekip div elementinin içerisine gönmek. Bunuda javascript'in map fonksiyonunu kullanarak yapacağız. Map fonksiyonu ile bilginiz yoksa, [buradan ](https://www.w3schools.com/jsref/jsref_map.asp)ne işe yaradığını öğrenebilirsiniz.
+
+```js
+    var TaskBoard = React.createClass({
+        getInitialState: function () {
+            return{
+                tasks: [
+                    'Task 1',
+                    'Task 2',
+                    'Task 3'
+                ]
+            }
+        },
+        render: function () {
+            return (
+                    <div className="board">
+                        {
+                            this.state.tasks.map(function (task, i) {
+                                return (<Task>{task}</Task>);
+                            })
+                        }
+                    </div>
+            );
+        }
+    });
+```
+
+
+
