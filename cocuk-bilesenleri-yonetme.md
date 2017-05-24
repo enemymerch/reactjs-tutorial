@@ -1,4 +1,4 @@
-# Çocuk Bileşenleri Yönetme
+# Çocuk Bileşenleri Yönetme 1
 
 Bu başlıkla oluşturduğumuz TaskBoard bileşene, içerisindeki çocuk bileşenler olan Task bileşenlerini silmek ve güncelleştirmek için ihtiyacımız olan iki tane fonksiyon ekleyeceğiz. Ekleyeceğimiz fonksiyonlar daha önceden oluşturduğumuz **tasks **adlı state'in durumunu gerektiği şekilde güncelleştirecekler.
 
@@ -29,8 +29,6 @@ _**bileseniGüncelle**_ fonksiyonu
 ```
 
 Bu fonksiyonda ise, array'in belli bir index'indeki değişkeni silmek yerine, o değişkeni güncelliyoruz.
-
-
 
 **index.html**
 
@@ -140,6 +138,8 @@ Bu fonksiyonda ise, array'in belli bir index'indeki değişkeni silmek yerine, o
 </body>
 </html>
 ```
+
+TaskBoard bileşenine, bileseniSil ve bileseniGüncelle adında iki fonksiyon ekledik ama hala edit ve delete butonlarımız hazır değil. Çünkü hatırlıyacağımız üzere edit ve delete butonları, Task bileşeninin içerisinde olan fonksiyonları tetikliyorlar. Sonraki başlıklarda Task bileşeninin fonksiyonlarından parent\(üst\) bileşenin fonksiyonlarını nasıl çağırabileceğimizi göreceğiz.  
 
 
 
