@@ -90,7 +90,7 @@ kodumuz çalışmayacaktır. Çünkü ReactDOM.render\(\) method'u da createClas
 
 şöyle düzeltiyoruz.
 
-```js
+```react
         ReactDOM.render(<div>
             <Comp />
             <Comp />
