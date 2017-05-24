@@ -129,8 +129,6 @@ Yeni save fonksiyomuz ile referans verdiğimiz element'imize \_**this.refs.{refe
 </html>
 ```
 
-
-
 **Sonuç**
 
 Edit buton'una basıp yeni bir yazı giriyoruz ve sonrasında Save buton'una basıyoruz.
@@ -140,4 +138,8 @@ Edit buton'una basıp yeni bir yazı giriyoruz ve sonrasında Save buton'una bas
 ![](/assets/Refs2.png)
 
 Sonuç olarak ReactJS refs 'i kullanarak html element'imize eriştik. Ama hala yeni yazımızı kayıt edebilir hale gelemedik. İlerki başlıklarda bu sorun'un üzerinde duracağız.
+
+
+
+En son olarak kodumuza birden fazl **task** bileşeni ekliyoruz. Çünkü önümüzdeki başlıklarda birden fazla bileşenine ihtiyacımız olacak.
 
