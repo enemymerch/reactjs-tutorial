@@ -206,5 +206,5 @@ ReactJS'in key özelliğini kullanarak TaskBoard içerisindeki Task bileşenleri
 </html>
 ```
 
-İleriki başlıklarda edit ve delete işlemlerini gerçekleştireceğiz.
+İlerdeki başlıklarda edit ve delete işlemlerini gerçekleştireceğiz.
 
