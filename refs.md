@@ -55,5 +55,5 @@ Bu fonksiyonumuzda yaptığımız tek şey _**editing **\_state'imizi false yapm
         }
 ```
 
-Yeni save fonksiyomuz ile referans verdiğimiz element'imize _**this.refs.{referans} **_ile ulaşabiliyoruz.
+Yeni save fonksiyomuz ile referans verdiğimiz element'imize \_**this.refs.{referans} **ile ulaşabiliyoruz. Bizim durumumuzda textarea'nın değerini almamız gerekiyor. Textarea'nın value'suna da **this.refs.yaziAlani.value**  kod parçası ile erişebildik. Ve sonuç olarak yazılan yeni yazıyı **alert**\(\) method'u ile ekranda gösterebildik.
 
