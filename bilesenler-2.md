@@ -42,7 +42,7 @@ kodumuz çalışmayacaktır. Çünkü bu şekilde createClass method'una 2 tane 
 
 **index.html**
 
-```html
+```js
 <!DOCTYPE html>
 <html>
 <head>
