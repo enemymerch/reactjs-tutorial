@@ -80,11 +80,18 @@ Başlangıç olarak bileşenlerimizi bir \_**div **\_elementinin içerisinde top
     });
 ```
 
+Map fonksiyonun içerisine verdiğimiz fonksiyon;
+
+```
+function (task, i) {
+    return (<Task>{task}</Task>);
+}
+```
+
 ReactDOM.render fonksiyonun'un içerisine Task bileşeni yerine TaskBoard bileşenini vereceğiz artık.
 
 ```js
  ReactDOM.render(<TaskBoard/>, document.getElementById("container"));
- 
 ```
 
 Sonuç
@@ -92,6 +99,4 @@ Sonuç
 ![](/assets/multiChild.png)
 
 Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da ReactJS'in key özelliği ile çözebiliyoruz.
-
-
 
