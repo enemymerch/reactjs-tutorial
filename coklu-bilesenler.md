@@ -66,13 +66,14 @@ Başlangıç olarak bileşenlerimizi bir \_**div **\_elementinin içerisinde top
                 ]
             }
         },
+        getTask: function (taskText, i) {
+            return (<Task key={i}>{taskText}</Task>);
+        },
         render: function () {
             return (
                     <div className="board">
                         {
-                            this.state.tasks.map(function (taskText, i) {
-                                return (<Task>{taskText}</Task>);
-                            })
+                            this.state.tasks.map(this.getTask)
                         }
                     </div>
             );
@@ -100,7 +101,7 @@ Sonuç
 
 ![](/assets/multiChild.png)
 
-Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da ReactJS'in _**key **_özelliği ile çözebiliyoruz. Key özelliğini map fonksiyonu ile oluşturduğumuz her task bileşenine vermemiz gerekiyor. Bunuda map fonksiyonunun içerisine parametre olarak verdiğimiz fonksiyonun içerisinde çözeceğiz.
+Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da oluşturduğumuz her Task bileşenine bir **index**_** **_özelliği ekleyerek çözebiliyoruz. İndex özelliğini map fonksiyonu ile oluşturduğumuz her task bileşenine vermemiz gerekiyor. Bunuda map fonksiyonunun içerisine parametre olarak verdiğimiz fonksiyonun içerisinde çözeceğiz.
 
 ```js
         getTask: function (taskText, i) {
@@ -174,7 +175,6 @@ ReactJS'in key özelliğini kullanarak TaskBoard içerisindeki Task bileşenleri
             }
         }
     });
-
     var TaskBoard = React.createClass({
         getInitialState: function () {
             return{
@@ -185,18 +185,20 @@ ReactJS'in key özelliğini kullanarak TaskBoard içerisindeki Task bileşenleri
                 ]
             }
         },
+        getTask: function (taskText, i) {
+            return (<Task key={i}>{taskText}</Task>);
+        },
         render: function () {
             return (
                     <div className="board">
                         {
-                            this.state.tasks.map(function (taskText, i) {
-                                return (<Task key={i}>{taskText}</Task>);
-                            })
+                            this.state.tasks.map(this.getTask)
                         }
                     </div>
             );
         }
     });
+
 
     ReactDOM.render(<TaskBoard/>, document.getElementById("container"));
 </script>
