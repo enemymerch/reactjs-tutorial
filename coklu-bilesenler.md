@@ -30,7 +30,7 @@ var TaskBoard = React.createClass({
 
 TaskBoard bileşenin içerisinde Task bileşenlerini tutan bir dizimiz\("tasks"\) var. render fonksiyonunda yapmak istediğimiz de, bu dizideki bileşenleri return edebilmek.
 
-Başlangıç olarak bileşenlerimizi bir _**div **_elementinin içerisinde toplamamız gerekiyor.
+Başlangıç olarak bileşenlerimizi bir \_**div **\_elementinin içerisinde toplamamız gerekiyor.
 
 ```js
     var TaskBoard = React.createClass({
@@ -46,14 +46,14 @@ Başlangıç olarak bileşenlerimizi bir _**div **_elementinin içerisinde topla
         render: function () {
             return (
                     <div className="board">
-                        
+
                     </div>
             );
         }
     });
 ```
 
-Şimdi ise, _**tasks**_ dizisinden stringleri çekip div elementinin içerisine gönmek. Bunuda javascript'in map fonksiyonunu kullanarak yapacağız. Map fonksiyonu ile bilginiz yoksa, [buradan ](https://www.w3schools.com/jsref/jsref_map.asp)ne işe yaradığını öğrenebilirsiniz.
+Şimdi ise, _**tasks**_ dizisinden stringleri çekip div elementinin içerisine gönmek. Bunuda javascript'in map fonksiyonunu kullanarak yapacağız. Map fonksiyonu ile ayrıntılı bilgiyi  [buradan ](https://www.w3schools.com/jsref/jsref_map.asp)öğrenebilirsiniz. Ama basitçe anlatmak gerekirse bir for-each döngüsü gib i, dizinin her elemanı için map fonksiyonun içerisine parametre olarak verilen fonksiyonu çağırıyor.
 
 ```js
     var TaskBoard = React.createClass({
@@ -79,6 +79,19 @@ Başlangıç olarak bileşenlerimizi bir _**div **_elementinin içerisinde topla
         }
     });
 ```
+
+ReactDOM.render fonksiyonun'un içerisine Task bileşeni yerine TaskBoard bileşenini vereceğiz artık.
+
+```js
+ ReactDOM.render(<TaskBoard/>, document.getElementById("container"));
+ 
+```
+
+Sonuç
+
+![](/assets/multiChild.png)
+
+Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da ReactJS'in key özelliği ile çözebiliyoruz.
 
 
 
