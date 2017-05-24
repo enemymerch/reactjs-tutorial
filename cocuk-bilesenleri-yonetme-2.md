@@ -18,10 +18,9 @@ Task bileşeni için html kodu:
 
 ```html
 <Task index={i} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>
-
 ```
 
-Üstteki kod parçasında gördüğümüz gibi, yeni iki tane props var; _**save **_ve _** delete. **_Bu props'ların içerisine TaskBoard'un fonksiyonlarını gömüyoruz. props'larının içerisine istediğimiz her hangi bir değişkeni ya da şu an kullandığımız gibi her hangi bir fonksiyonu gömebiliriz. Bu da ReactJS'in kullanışlı yanlarından biri.
+Üstteki kod parçasında gördüğümüz gibi, yeni iki tane props var; _**save **\_ve _** delete. **\_Bu props'ların içerisine TaskBoard'un fonksiyonlarını gömüyoruz. props'larının içerisine istediğimiz her hangi bir değişkeni ya da şu an kullandığımız gibi her hangi bir fonksiyonu gömebiliriz. Bu da ReactJS'in kullanışlı yanlarından biri.
 
 TaskBoard bileşeninin son hali:
 
@@ -74,10 +73,8 @@ Task bileşeninin içerisinde yer alan yeni **remove** fonksiyonu:
 ```js
         remove: function () {
             this.props.delete(this.props.index);
-        } 
+        }
 ```
 
-Bileşenin props'una **this.props.{özellik} ** ile ulaşabiliyorduk. Burada da aynı yöntemi kullanıyoruz. Tek farkı bu kısımda props'umuzu bir fonksiyon çağırma syntax'ı ile yapıyoruz. Yani sonuna "**\(\)"  **ekliyoruz ve parantez'in içene gerekli parametreleri koyuyoruz. **delete** props'u **bileseniSil** fonksiyonun referans'ı olduğundan dolayı, içerisine yine Task bileşenine kimlik olarak verdiğimiz **index** props'unu  koyuyoruz.
-
-
+Bileşenin props'una **this.props.{özellik} ** ile ulaşabiliyorduk. Burada da aynı yöntemi kullanıyoruz. Tek farkı bu kısımda props'umuzu bir fonksiyon çağırma syntax'ı ile yapıyoruz. Yani sonuna "**\(\)"  **ekliyoruz ve parantez'in içene gerekli parametreleri koyuyoruz. **delete** props'u **bileseniSil** fonksiyonun referans'ı olduğundan dolayı, içerisine yine Task bileşenine kimlik olarak verdiğimiz **index** props'unu koyuyoruz.
 
