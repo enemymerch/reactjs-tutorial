@@ -105,7 +105,7 @@ Sonuç
 
 ```js
         getTask: function (taskText, i) {
-            return (<Task key={i}>{taskText}</Task>);
+            return (<Task index={i}>{taskText}</Task>);
         }
 ```
 
