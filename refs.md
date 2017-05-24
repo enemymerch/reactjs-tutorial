@@ -45,7 +45,7 @@ Bu fonksiyonumuzda yaptığımız tek şey _**editing **\_state'imizi false yapm
 
 **Yeni save fonksiyonu;**
 
-```
+```js
         save: function () {
             var yeniText = this.refs.yaziAlani.value;
             alert(yeniText)
@@ -55,5 +55,5 @@ Bu fonksiyonumuzda yaptığımız tek şey _**editing **\_state'imizi false yapm
         }
 ```
 
-
+Yeni save fonksiyomuz ile referans verdiğimiz element'imize _**this.refs.{referans} **_ile ulaşabiliyoruz.
 
