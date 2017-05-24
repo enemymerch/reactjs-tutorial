@@ -78,3 +78,20 @@ Task bileşeninin içerisinde yer alan yeni **remove** fonksiyonu:
 
 Bileşenin props'una **this.props.{özellik} ** ile ulaşabiliyorduk. Burada da aynı yöntemi kullanıyoruz. Tek farkı bu kısımda props'umuzu bir fonksiyon çağırma syntax'ı ile yapıyoruz. Yani sonuna "**\(\)"  **ekliyoruz ve parantez'in içene gerekli parametreleri koyuyoruz. **delete** props'u **bileseniSil** fonksiyonun referans'ı olduğundan dolayı, içerisine yine Task bileşenine kimlik olarak verdiğimiz **index** props'unu koyuyoruz.
 
+Şimdide Aynı işlemi Task bileşeninin içerisinde yer alan **save** fonskiyonu için yapıyoruz.
+
+Yeni **save** fonksiyonu:
+
+```js
+        save: function () {
+            this.props.save(this.refs.yaziAlani.value, this.props.index);
+            this.setState({
+                editing: false
+            })
+        }
+```
+
+
+
+
+
