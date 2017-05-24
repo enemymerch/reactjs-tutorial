@@ -29,7 +29,7 @@ bir "h1" elementi eklemek.
 
 **index.html**
 
-```js
+```html
 <!DOCTYPE html>
 <html>
 <head>
