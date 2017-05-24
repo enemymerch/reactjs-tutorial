@@ -6,12 +6,11 @@ _**TaskBoard**_ adında yeni bir bileşen oluşturmamız gerekiyor.
 
 ```js
 var TaskBoard = React.createClass({
-        
+
     });
-    
 ```
 
-Şimdi bu bileşenimiz'in içerisine Task bileşenlerini koyacağız. Yapmamız gereken şey TaskBoard bileşeni'nin içerisine stringlerden oluşan bir dizi'yi yeni bir state olarak eklemek. Bu state değişkeninin adı da tasks olacak. Bu state'imizide önceki başlıklardan öğrendiğimiz üzere _getInitialState _fonksiyonunda oluşturacağız.
+Şimdi bu bileşenimiz'in içerisine Task bileşenlerini koyacağız. Yapmamız gereken şey TaskBoard bileşeni'nin içerisine stringlerden oluşan bir dizi'yi yeni bir state olarak eklemek. Bu state değişkeninin adı da tasks olacak. Bu state'imizi önceki başlıklardan öğrendiğimiz üzere getInitialState fonksiyonunda oluşturacağız.
 
 ```js
     var TaskBoard = React.createClass({
@@ -24,8 +23,8 @@ var TaskBoard = React.createClass({
                 ]
             }
         }
-    }); 
+    });
 ```
 
-  
+
 
