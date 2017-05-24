@@ -83,8 +83,8 @@ Başlangıç olarak bileşenlerimizi bir \_**div **\_elementinin içerisinde top
 Map fonksiyonun içerisine verdiğimiz fonksiyon,
 
 ```
-function (task, i) {
-    return (<Task>{task}</Task>);
+function (taskText, i) {
+    return (<Task>{taskText}</Task>);
 }
 ```
 
