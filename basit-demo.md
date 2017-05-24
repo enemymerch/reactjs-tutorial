@@ -7,7 +7,7 @@ Bu başlık altında ilk basit ReactJS kodumuzu yazacağız ve  ReactJS'in bizim
 3. "body" elementinin altına bir "div" element'i oluşturuyoruz ve bu element'e "example" id'sini veriyoruz.
 4. Son olarakta
 
-```
+```js
     <script type="text/babel">
         ReactDOM.render(<h1>Hello ReactJS</h1>, document.getElementById("example"));
     </script>
@@ -15,7 +15,7 @@ Bu başlık altında ilk basit ReactJS kodumuzu yazacağız ve  ReactJS'in bizim
 
 kod parçasını "body" element'inin altına yerleştiriyoruz. Script type'ın "text/babel" olması bizim JSX syntax'ı üzerinden javascript yazdığımızı söylüyor ve bu syntax'ta yazdığımız kod sonuç olarak normal javascript koduna dönüştürülüyor. Ama ReactJS'i JSX syntax'ı ile yazmak çok daha basit.
 
-```
+```js
 ReactDOM.render(<h1>Hello ReactJS</h1>, document.getElementById("example"));
 ```
 
@@ -29,7 +29,7 @@ bir "h1" elementi eklemek.
 
 **index.html**
 
-```html
+```js
 <!DOCTYPE html>
 <html>
 <head>
