@@ -17,7 +17,7 @@ Hatırladığımız gibi,  **edit  **buton'una bastığımızda aşağıdaki kod
 
 Textarea'ya yazdığımız yeni yazıyı keyıt edebilememiz için;
 
-```
+```html
 <textarea defaultValue={this.props.children}></textarea>
 ```
 
@@ -25,9 +25,23 @@ textarea element'ine ulaşmamız gerekiyor. Bunu kolaylıkla element'e _**id **e
 
 ReactJS'in refs'lerini html elementlerinin bir özelliğiymiş gibi html kodunun içerisine yazıyoruz.
 
-```
+```html
 <textarea ref="yeniYazı" defaultValue={this.props.children}></textarea>
 ```
 
-Şimdi,
+Şimdi, textarea element'imize _**ref **_özelliğini ekledik. Bundan sonra yapmamız gereken şey ise _**save **_fonksiyonunu değiştirmek olacak. 
+
+Eski save fonksiyonu;
+
+```
+        save: function () {
+            var yeniText = this.refs.yeniYazı.value;
+
+            this.setState({
+                editing: false
+            })
+        }
+```
+
+
 
