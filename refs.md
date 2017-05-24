@@ -57,6 +57,18 @@ Bu fonksiyonumuzda yaptığımız tek şey _**editing **\_state'imizi false yapm
 
 Yeni save fonksiyomuz ile referans verdiğimiz element'imize \_**this.refs.{referans} **ile ulaşabiliyoruz. Bizim durumumuzda textarea'nın değerini almamız gerekiyor. Textarea'nın value'suna da **this.refs.yaziAlani.value**  kod parçası ile erişebildik. Ve sonuç olarak yazılan yeni yazıyı **alert**\(\) method'u ile ekranda gösterebildik.
 
+**Sonuç**
+
+Edit buton'una basıp yeni bir yazı giriyoruz ve sonrasında Save buton'una basıyoruz.
+
+![](/assets/Refs.png)Tamam'a bastıktan sonra;
+
+![](/assets/Refs2.png)
+
+Sonuç olarak ReactJS refs 'i kullanarak html element'imize eriştik. Ama hala yeni yazımızı kayıt edebilir hale gelemedik. İlerki başlıklarda bu sorun'un üzerinde duracağız.
+
+En son olarak kodumuza birden fazl **task** bileşeni ekliyoruz. Çünkü önümüzdeki başlıklarda birden fazla bileşenine ihtiyacımız olacak.
+
 **index.html**
 
 ```html
@@ -122,24 +134,16 @@ Yeni save fonksiyomuz ile referans verdiğimiz element'imize \_**this.refs.{refe
         }
     });
     ReactDOM.render(<div className="board">
-        <Task>Dinamik Textli Görevimiz!</Task>
+        <Task>Dinamik Textli Görevimiz 1</Task>
+        <Task>Dinamik Textli Görevimiz 2</Task>
+        <Task>Dinamik Textli Görevimiz 3</Task>
     </div>, document.getElementById("container"));
 </script>
 </body>
 </html>
 ```
 
-**Sonuç**
+**Son görünüm**
 
-Edit buton'una basıp yeni bir yazı giriyoruz ve sonrasında Save buton'una basıyoruz.
-
-![](/assets/Refs.png)Tamam'a bastıktan sonra;
-
-![](/assets/Refs2.png)
-
-Sonuç olarak ReactJS refs 'i kullanarak html element'imize eriştik. Ama hala yeni yazımızı kayıt edebilir hale gelemedik. İlerki başlıklarda bu sorun'un üzerinde duracağız.
-
-
-
-En son olarak kodumuza birden fazl **task** bileşeni ekliyoruz. Çünkü önümüzdeki başlıklarda birden fazla bileşenine ihtiyacımız olacak.
+![](/assets/lastShot.png)
 
