@@ -7,7 +7,7 @@ Bu başlık altında ilk basit ReactJS kodumuzu yazacağız ve  ReactJS'in bizim
 3. "body" elementinin altına bir "div" element'i oluşturuyoruz ve bu element'e "example" id'sini veriyoruz.
 4. Son olarakta
 
-```html
+```
     <script type="text/babel">
         ReactDOM.render(<h1>Hello ReactJS</h1>, document.getElementById("example"));
     </script>
@@ -47,7 +47,6 @@ bir "h1" elementi eklemek.
 </script>
 </body>
 </html>
-
 ```
 
 **Sonuç sayfamız**
