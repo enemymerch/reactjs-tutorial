@@ -80,12 +80,12 @@ Başlangıç olarak bileşenlerimizi bir \_**div **\_elementinin içerisinde top
     });
 ```
 
-Map fonksiyonun içerisine verdiğimiz fonksiyon,
+Map fonksiyonun içerisine verdiğimiz fonksiyon : **getTask**
 
-```
-function (taskText, i) {
-    return (<Task>{taskText}</Task>);
-}
+```js
+        getTask: function (taskText, i) {
+            return (<Task>{taskText}</Task>);
+        }
 ```
 
 **taskText **ve **i **adında iki tane parametre alıyor. taskText parametresi **tasks **dizisindeki değişken'e , **i** parametresi de her değişkenin index'îne denk geliyor.
