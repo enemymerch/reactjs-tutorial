@@ -70,8 +70,8 @@ Başlangıç olarak bileşenlerimizi bir \_**div **\_elementinin içerisinde top
             return (
                     <div className="board">
                         {
-                            this.state.tasks.map(function (task, i) {
-                                return (<Task>{task}</Task>);
+                            this.state.tasks.map(function (taskText, i) {
+                                return (<Task>{taskText}</Task>);
                             })
                         }
                     </div>
@@ -80,13 +80,15 @@ Başlangıç olarak bileşenlerimizi bir \_**div **\_elementinin içerisinde top
     });
 ```
 
-Map fonksiyonun içerisine verdiğimiz fonksiyon;
+Map fonksiyonun içerisine verdiğimiz fonksiyon,
 
 ```
 function (task, i) {
     return (<Task>{task}</Task>);
 }
 ```
+
+**task** ve **i **adında iki tane parametre alıyor. 
 
 ReactDOM.render fonksiyonun'un içerisine Task bileşeni yerine TaskBoard bileşenini vereceğiz artık.
 
