@@ -1,4 +1,4 @@
-# Bileşenler 3
+# Bileşenler 3 \(Props\)
 
 Bu başlıkta ReactJS bileşenlerinin özelliklerini  ve HTML elementlerinden farklılaştıkları noktaları göreceğiz.
 
