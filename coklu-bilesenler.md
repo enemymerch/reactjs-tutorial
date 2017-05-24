@@ -186,7 +186,7 @@ ReactJS'in key özelliğini kullanarak TaskBoard içerisindeki Task bileşenleri
             }
         },
         getTask: function (taskText, i) {
-            return (<Task key={i}>{taskText}</Task>);
+            return (<Task index={i}>{taskText}</Task>);
         },
         render: function () {
             return (
