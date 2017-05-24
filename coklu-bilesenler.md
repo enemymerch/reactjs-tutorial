@@ -90,8 +90,6 @@ function (task, i) {
 
 **taskText **ve **i **adında iki tane parametre alıyor. taskText parametresi **tasks **dizisindeki değişken'e , **i** parametresi de her değişkenin index'îne denk geliyor.
 
-
-
 Bundan sonra yapmamız gereken; ReactDOM.render fonksiyonun'un içerisine Task bileşeni yerine TaskBoard bileşenini vermek.
 
 ```js
@@ -102,5 +100,13 @@ Sonuç
 
 ![](/assets/multiChild.png)
 
-Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da ReactJS'in key özelliği ile çözebiliyoruz.
+Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da ReactJS'in _**key **_özelliği ile çözebiliyoruz. Key özelliğini map fonksiyonu ile oluşturduğumuz her task bileşenine vermemiz gerekiyor. Bunuda map fonksiyonunun içerisine parametre olarak verdiğimiz fonksiyonun içerisinde çözeceğiz.
+
+```
+function (task, i) {
+    return (<Task key={i}>{taskText}</Task>);
+}
+```
+
+
 
