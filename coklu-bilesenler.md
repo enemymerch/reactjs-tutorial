@@ -1,4 +1,4 @@
-# Çoklu Bileşenler
+# Çoklu Bileşenler\(Çocuk Bileşenler\)
 
 Kodumuzun son halinde, sayfamızda üç tane **Task** bileşeni bulunuyordu. Ve bunların _**delete**_ ve _**edit **\_butonları tam anlamıyla çalışmıyor. Bileşenlerimizin içerisindeki elementlere nasıl eriştiğimizi bir önceki başlıkta görmüştük ama şu anki ileride _**delete**\_ görevini yapabilmek için bizim sayfamızda kaç tane task bileşenimizin olduğu, bu bileşenlerin kimliklerini v.b. bilgileri elimizde tutmamız gerekiyor. Bundan dolayı elimizdeki task bileşenlerini içerisine gömebileceğimiz bir büyük bileşenimiz'in olması gerekiyor.
 
@@ -89,7 +89,7 @@ Map fonksiyonun içerisine verdiğimiz fonksiyon : **getTask**
         }
 ```
 
-**taskText **ve **i **adında iki tane parametre alıyor. taskText parametresi **tasks **dizisindeki değişken'e , **i** parametresi de her değişkenin index'îne denk geliyor.
+**taskText **ve **i **adında iki tane parametre alıyor. taskText parametresi **tasks **dizisindeki değişken'e , **i** parametresi de her değişkenin index'îne denk geliyor ve yeni bir Task bileşeni döndürüyor.
 
 Bundan sonra yapmamız gereken; ReactDOM.render fonksiyonun'un içerisine Task bileşeni yerine TaskBoard bileşenini vermek.
 
@@ -101,7 +101,7 @@ Sonuç
 
 ![](/assets/multiChild.png)
 
-Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da oluşturduğumuz her Task bileşenine bir **index**_** **_özelliği ekleyerek çözebiliyoruz. İndex özelliğini map fonksiyonu ile oluşturduğumuz her task bileşenine vermemiz gerekiyor. Bunuda map fonksiyonunun içerisine parametre olarak verdiğimiz fonksiyonun içerisinde çözeceğiz.
+Şu ana kadar birden fazla bileşeni bir büyük bileşen içerisinde toplamayı başardık. Ama çocuk bileşenlerimizin \(Task bileşenleri\) hala kendilerine özgü birer kimlikleri yok. Bu sorunu da oluşturduğumuz her Task bileşenine bir **index**_** **_özelliği ekleyerek çözebiliyoruz. İndex özelliğini map fonksiyonu ile oluşturduğumuz her task bileşenine vermemiz gerekiyor. Bunuda **getTask** fonksiyonun içerisinde çözeceğiz.
 
 ```js
         getTask: function (taskText, i) {
@@ -109,7 +109,7 @@ Sonuç
         }
 ```
 
-ReactJS'in key özelliğini kullanarak TaskBoard içerisindeki Task bileşenlerine kendi özel kimliklerini verdik.
+ReactJS'in props özelliğini kullanarak TaskBoard içerisindeki Task bileşenlerine kendi özel kimliklerini verdik.
 
 **index.html**
 
@@ -206,5 +206,5 @@ ReactJS'in key özelliğini kullanarak TaskBoard içerisindeki Task bileşenleri
 </html>
 ```
 
-Sonuç olarak bu başlıkta ; birden fazla bileşeni çocuk bileşen olarak kullanıp tek büyük bir bileşen oluştutduk. Daha ilerideki başlıklarda, Task bileşenine edit ve delete işlemlerini ekleyeceğiz.
+Sonuç olarak bu başlıkta ; birden fazla bileşeni çocuk bileşen olarak kullanıp tek büyük bir bileşen oluşturduk. Daha ilerideki başlıklarda, Task bileşenine edit ve delete işlemlerini ekleyeceğiz.
 

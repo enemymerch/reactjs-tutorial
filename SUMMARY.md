@@ -10,5 +10,6 @@
 * [State\(Durum\) 1](state-durum.md)
 * [State \(Durum\) 2](state-durum-2.md)
 * [Refs](refs.md)
-* [Çoklu Bileşenler](coklu-bilesenler.md)
+* [Çoklu Bileşenler\(Çocuk Bileşenler\)](coklu-bilesenler.md)
+* [Çocuk Bileşenleri Yönetme](cocuk-bilesenleri-yonetme.md)
 
