@@ -1,6 +1,6 @@
 # Çevreyi Kurmak
 
-
+#### 1.Yöntem \(npm ve Web Strom\)
 
 * [npm.com](https://www.gitbook.com/book/enemymerch/test/edit#)'dan Node.js ile beraber npm'i yükle.
 
@@ -20,11 +20,9 @@ Bu yöntem ile direk olarak bir ReactJS projesi oluşturmuş oluyoruz.
 
 Detaylı kurulum için [ github.com/facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app) adresine göz atabilirsiniz.
 
-#### 1.Yöntem
 
-Gerekli olan ReactJS dosyalarını bilgisayarınıza [buradan](https://www.gitbook.com/book/enemymerch/reactjs-tutorial/edit#) indirdikten sonra npm ile oluşturduğunuz projenin altındaki src klasörüne
 
-.js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanabilirsiniz.
+Gerekli olan ReactJS dosyalarını bilgisayarınıza [buradan](https://www.gitbook.com/book/enemymerch/reactjs-tutorial/edit#) indirdikten sonra npm ile oluşturduğunuz projeyi Web Strom ile açın. Projenin altındaki src klasörüne .js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanabilirsiniz.
 
 ```html
 <!-- reactJS'in kendi kütüphanesi -->
@@ -41,11 +39,11 @@ Gerekli olan ReactJS dosyalarını bilgisayarınıza [buradan](https://www.gitbo
 <script src="../js/browser.min.js"></script>
 ```
 
-#### 3.Yöntem
+#### 
 
-Gerekli olan ReactJS dosyalarını bilgisayarınıza indirdikten sonra npm ile oluşturduğunuz projenin altındaki src klasörüne
+#### 2.Yöntem\(Web Strom\)
 
-.js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanmak.
+Web Strom editörü ile direk olarak React projesi oluşturarak devam edebilirsiniz.
 
-Dosyaları [buradan](https://drive.google.com/drive/folders/0BxLeFDQhe16BQWhxQllicnktNWM?usp=sharing) indirip projenizin altına ekleyebilirsiniz.
+
 
