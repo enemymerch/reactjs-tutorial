@@ -64,9 +64,17 @@ Yeni **Body **kısmı:
 
 **board** id'li div elementi ReactJS bileşenlerinin render edileceği bölüm olacak.
 
-#### Proje Yapısı
+### Proje Yapısı
 
-Önceki başlıklarda TaskBoard bileşenimizin içerisinde Task bileşenlerini tutan bir tane task listesi\(_this.state.tasks_\) vardı. Projemiz  başlıca üç farklı Task başlığı altında toplanacak. Bunlar **notStarted, inProcess **ve **finished**. Yani her başlık için ayrı task listesi tutacağız. Bundan dolayı TaskBoard bileşenimizin içerisindeki fonksiyonları güncellememiz gerekicek.
+Projemiz **notStarted, inProcess **ve **finished **adlarını verdiğimiz, üç ayrı Task listesinden oluşacak. Bu listeler arasında Task bileşenlerini ilerletip, geriletebileceğiz. Bundan dolayı TaskBoard ve Task bileşenlerinde değişiklikler yapmamız gerekecek.
+
+
+
+### TaskBoard bileşenindeki değişiklikler
+
+Önceki başlıklarda TaskBoard bileşenimizin içerisinde Task bileşenlerini tutan bir tane task listesi\(_this.state.tasks_\) vardı. Projemiz  başlıca üç farklı Task başlığı altında toplandığından dolayı\(**notStarted, inProcess **ve **finished\)** her başlık için ayrı task listesi tutacağız. 
+
+
 
 İlk önce **getInitialState** fonksiyonumuzu değiştireceğiz.
 
@@ -76,19 +84,15 @@ Yeni **getInitialState** fonksiyonu:
         getInitialState: function () {
             return{
                 notStarted: [
-                    'Task 1',
-                    'Task 2',
-                    'Task 3'
+                    'CS 101 - Assignment4',
+                    'CS 232 - Final Çalışması'
                 ],
                 inProcess: [
-                    'Task 1',
-                    'Task 2',
-                    'Task 3'
+                    'CS 204 - Assignment 5'
                 ],
                 finished: [
-                    'Task 1',
-                    'Task 2',
-                    'Task 3'
+                    'CS 401 - Final Çalışması',
+                    'MAT 254 - Final Çalışması'
                 ]
             }
         }
@@ -304,6 +308,49 @@ Yeni **render** fonksiyonu:
 ```
 
 Artık üç ayrı listeyi render ediyoruz.
+
+### Task bileşenindeki değişiklikler
+
+Task bileşeninde önemli sadece iki değişiklik var. Bunlarda task listeleri arasındaki geçişleri sağlamak için eklenen yeni butonları kontrol etmek için ihitiyacımız olan yeni iki tane fonksiyon. Bu fonksiyonlar;
+
+**ilerlet**
+
+```js
+        ilerlet: function () {
+            this.props.next(this.props.index, this.props.durum);
+        }
+```
+
+
+
+ve **gerilet**
+
+```
+        gerilet: function () {
+            this.props.prev(this.props.index, this.props.durum);
+        }
+    
+```
+
+fonksiyonları. Bu fonksiyonlar paren bileşenden\(TaskBoard\) props ile iletilmiş olan fonksiyonları çağırıyorlar.
+
+Bu fonksiyonlar haricinde, **remove **ve **save** fonksiyonlarında da değişiklikler var.
+
+```
+        remove: function () {
+            this.props.delete(this.props.index, this.props.durum);
+        },
+        save: function () {
+            this.props.save(this.refs.yaziAlani.value, this.props.index, this.props.durum);
+            this.setState({
+                editing: false
+            })
+        }
+```
+
+Artık **durum** props'ını da iletiyorlar parent bileşen fonksiyonlarına.
+
+
 
 
 
