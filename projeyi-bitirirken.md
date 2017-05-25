@@ -196,7 +196,7 @@ TaskBoard bileşeninde geri kalan fonksiyonları'da yeni yönetim sistemimize g�
 
 Yeni **yeniTaskEkle **fonksiyonu:
 
-```
+```js
         yeniTaskEkle: function () {
             var taskArr = this.state.notStarted;
             taskArr.push(this.refs.yeniTaskTextAlanı.value);
