@@ -35,7 +35,7 @@ Ayrıca görünüş'ü biraz daha özelleştirebilmek için küçük bir css kod
             margin: 3%;
             padding: 3%;
         }
-        .TaskBoard{
+        .TaskTable{
             background-color: #2ecc71;
             margin: 3%;
             padding: 3%;
@@ -194,7 +194,7 @@ Task bileşeninin durum'una göre bileşeni ilerletiyor.
 
 TaskBoard bileşeninde geri kalan fonksiyonları'da yeni yönetim sistemimize göre güncellememiz gerekiyor.
 
-Yeni **yeniTaskEkle **fonksiyonu:
+Yeni **yeniTaskEkle, bileseniSil** ve **bileseniGüncelle **fonksiyonları:
 
 ```js
         yeniTaskEkle: function () {
@@ -203,10 +203,107 @@ Yeni **yeniTaskEkle **fonksiyonu:
             this.setState({
                 notStarted: taskArr
             });
+        },
+        bileseniGüncelle: function (yeniText, index, durum) {
+            var taskArr;
+            if(durum == "notStarted"){
+                taskArr = this.state.notStarted;
+                taskArr[index] = yeniText;
+                this.setState({
+                    notStarted: taskArr
+                });
+            }else if(durum =="inProcess"){
+                taskArr = this.state.inProcess;
+                taskArr[index] = yeniText;
+                this.setState({
+                    inProcess: taskArr
+                });
+            }else if(durum == "finished"){
+                taskArr = this.state.finished;
+                taskArr[index] = yeniText;
+                this.setState({
+                    finished: taskArr
+                });
+            }
+        },
+        bileseniSil: function (index, durum) {
+
+            var taskArr;
+            if(durum == "notStarted"){
+                taskArr = this.state.notStarted;
+                taskArr.splice(index,1);
+                this.setState({
+                    notStarted: taskArr
+                });
+            }else if(durum == "inProcess"){
+                taskArr = this.state.inProcess;
+                taskArr.splice(index,1);
+                this.setState({
+                    inProcess: taskArr
+                });
+            }else if(durum == "finished"){
+                taskArr = this.state.finished;
+                taskArr.splice(index,1);
+                this.setState({
+                    finished: taskArr
+                });
+            }
         }
 ```
 
+Her fonksiyon, artık Task bileşeninin durum props'una göre çalışıyor.
 
+TaskBoard bileşen'inde yaptığımız son değşiklik te render fonksiyonunu düzenlemek.
+
+Yeni **render** fonksiyonu:
+
+```js
+        render: function () {
+            return (
+                    <div className="container">
+                        <div className="row">
+                            <div className="text-center">
+                                <textarea  defaultValue="Yeni Task" ref="yeniTaskTextAlanı"></textarea>
+                                <br/>
+                                <button onClick={this.yeniTaskEkle} className="btn-lg">Add New Task</button>
+
+                            </div>
+                        </div>
+
+                        <br/>
+                        <div className="container">
+                            <div className="col-xs-4">
+                                <h2 className="text-danger">Not Started</h2>
+                                <div className="TaskTable">
+                                    {
+                                        this.state.notStarted.map(this.getTaskNotStarted)
+                                    }
+                                </div>
+                            </div>
+                            <div className="col-xs-4">
+                                <h2 className="text-danger">In Process</h2>
+                                <div className="TaskTable">
+                                    {
+                                        this.state.inProcess.map(this.getTaskInProcess)
+                                    }
+                                </div>
+                            </div>
+                            <div className="col-xs-4">
+                                <h2 className="text-danger">Finished</h2>
+                                <div className="TaskTable">
+                                    {
+                                        this.state.finished.map(this.getTaskFinished)
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            );
+        }
+```
+
+Artık üç ayrı listeyi render ediyoruz.
 
 
 
