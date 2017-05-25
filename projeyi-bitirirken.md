@@ -110,5 +110,101 @@ Yeni task fonksiyonları:
         }
 ```
 
+Gördüğümüz gibi yeni fonksiyonlarımızda fazladan üç tane daha props veriliyor Task bileşenlerine. **durum** props'ının nedeni Task bileşeninin hangi listede oldğunu takip etmek için.** prev** ve **next** props'ları ile iki yeni fonksiyon veriliyor child Task bileşenlere. Bu fonksiyonlar'ın amaçı ise listeler arası Task bileşenlerini taşımak.
+
+**bileseniGerilet **fonksiyonu,
+
+```js
+        bileseniGerilet: function (index, durum) {
+            if(durum == "notStarted"){
+                alert("Daha gerileyemez");
+                return;
+            }
+
+            var taskArr1;
+            var text;
+            var taskArr2;
+            if(durum == "finished"){
+                taskArr1 = this.state.finished;
+                text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    finished: taskArr1
+                });
+                taskArr2 = this.state.inProcess;
+                taskArr2.push(text);
+                this.setState({
+                    inProcess: taskArr2
+                });
+            }else if(durum == "inProcess"){
+                taskArr1 = this.state.inProcess;
+                text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    inProcess: taskArr1
+                });
+                taskArr2 = this.state.notStarted;
+                taskArr2.push(text);
+                this.setState({
+                    notStarted: taskArr2
+                });
+            }
+        }
+```
+
+Task bileşeninin durum'una göre bileşeni ilerletiyor.
+
+**bileseniIlerlet** fonksiyonu da bileseniGerilet fonksiyonuna çok benzer.
+
+```js
+        bileseniIlerlet: function (index, durum) {
+            if(durum == "finished"){
+                alert("Daha ilerleyemez");
+                return;
+            }
+
+
+            if(durum == "notStarted"){
+                var taskArr1 = this.state.notStarted;
+                var text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    notStarted: taskArr1
+                });
+                var taskArr2 = this.state.inProcess;
+                taskArr2.push(text);
+                this.setState({
+                    inProcess: taskArr2
+                });
+            }else if(durum == "inProcess"){
+                var taskArr1 = this.state.inProcess;
+                var text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    inProcess: taskArr1
+                });
+                var taskArr2 = this.state.finished;
+                taskArr2.push(text);
+                this.setState({
+                    finished: taskArr2
+                });
+            }
+        }
+```
+
+TaskBoard bileşeninde geri kalan fonksiyonları'da yeni yönetim sistemimize göre güncellememiz gerekiyor.
+
+Yeni **yeniTaskEkle **fonksiyonu:
+
+```
+        yeniTaskEkle: function () {
+            var taskArr = this.state.notStarted;
+            taskArr.push(this.refs.yeniTaskTextAlanı.value);
+            this.setState({
+                notStarted: taskArr
+            });
+        }
+```
+
 
 
