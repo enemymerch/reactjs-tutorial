@@ -68,13 +68,9 @@ Yeni **Body **kısmı:
 
 Projemiz **notStarted, inProcess **ve **finished **adlarını verdiğimiz, üç ayrı Task listesinden oluşacak. Bu listeler arasında Task bileşenlerini ilerletip, geriletebileceğiz. Bundan dolayı TaskBoard ve Task bileşenlerinde değişiklikler yapmamız gerekecek.
 
-
-
 ### TaskBoard bileşenindeki değişiklikler
 
-Önceki başlıklarda TaskBoard bileşenimizin içerisinde Task bileşenlerini tutan bir tane task listesi\(_this.state.tasks_\) vardı. Projemiz  başlıca üç farklı Task başlığı altında toplandığından dolayı\(**notStarted, inProcess **ve **finished\)** her başlık için ayrı task listesi tutacağız. 
-
-
+Önceki başlıklarda TaskBoard bileşenimizin içerisinde Task bileşenlerini tutan bir tane task listesi\(_this.state.tasks_\) vardı. Projemiz  başlıca üç farklı Task başlığı altında toplandığından dolayı\(**notStarted, inProcess **ve **finished\)** her başlık için ayrı task listesi tutacağız.
 
 İlk önce **getInitialState** fonksiyonumuzu değiştireceğiz.
 
@@ -321,15 +317,12 @@ Task bileşeninde önemli sadece iki değişiklik var. Bunlarda task listeleri a
         }
 ```
 
-
-
 ve **gerilet**
 
 ```
         gerilet: function () {
             this.props.prev(this.props.index, this.props.durum);
         }
-    
 ```
 
 fonksiyonları. Bu fonksiyonlar paren bileşenden\(TaskBoard\) props ile iletilmiş olan fonksiyonları çağırıyorlar.
@@ -350,7 +343,363 @@ Bu fonksiyonlar haricinde, **remove **ve **save** fonksiyonlarında da değişik
 
 Artık **durum** props'ını da iletiyorlar parent bileşen fonksiyonlarına.
 
+Son değişkliğimiz de Task bileşeninin **normalMode **ve **editingMode** fonksiyonlarına.
 
+```js
+        normalMode: function () {
+            return (
+                    <div className="Task">
+                        <div className="container">
+                            <p className="text-info">{this.props.children}</p>
+                        </div>
+                        <div className="container btn-group">
+                            <button onClick={this.edit} className="btn-primary">Edit</button>
+                            <button onClick={this.remove} className="btn-danger">Remove</button>
+                            <br/>
+                            <button onClick={this.gerilet} className="btn-default">Geri</button>
+                            <button onClick={this.ilerlet} className="btn-default">Ileri</button>
+                        </div>
+
+                        <br/>
+                    </div>
+            );
+        },
+        editingMode: function () {
+            return (
+                    <div className="Task">
+                        <div className="container">
+                            <textarea ref="yaziAlani" defaultValue={this.props.children}></textarea>
+                        </div>
+                        <div className="container">
+                            <button onClick={this.save} className="btn-danger">Save</button>
+                        </div>
+                    </div>
+            );
+        }
+```
+
+
+
+
+
+#### **index.html **
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <!-- Css File Links-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: #9acfea;
+            font-family: "Comic Sans MS";
+        }
+        .Task{
+            background-color: #9acfea;
+            border-color: #1b6d85;
+            border: medium;
+            border-style: double;
+            margin: 3%;
+            padding: 3%;
+        }
+        .TaskTable{
+            background-color: #2ecc71;
+            margin: 3%;
+            padding: 3%;
+        }
+    </style>
+
+    <!-- Other Js links-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- ReactJS Links -->
+    <script src="../js/react.min.js"></script>
+    <script src="../js/react-dom.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <h1 class="text-center text-primary" >ReactJS Beginner Tutorial</h1>
+    <h2 class="text-center text-primary"> Task Yönetim Sistemi</h2>
+
+    <br/>
+    <br/>
+
+    <div style="margin-top: 10%" id="board" >
+
+    </div>
+</div>
+
+
+<script type="text/babel">
+
+    var Task = React.createClass({
+        getInitialState: function () {
+            return(
+                {editing: false}
+            );
+        },
+        edit: function () {
+            this.setState({
+                editing: true
+            });
+        },
+        remove: function () {
+            this.props.delete(this.props.index, this.props.durum);
+        },
+        save: function () {
+            this.props.save(this.refs.yaziAlani.value, this.props.index, this.props.durum);
+            this.setState({
+                editing: false
+            })
+        },
+        ilerlet: function () {
+            this.props.next(this.props.index, this.props.durum);
+        },
+        gerilet: function () {
+            this.props.prev(this.props.index, this.props.durum);
+        },
+        normalMode: function () {
+            return (
+                    <div className="Task">
+                        <div className="container">
+                            <p className="text-info">{this.props.children}</p>
+                        </div>
+                        <div className="container btn-group">
+                            <button onClick={this.edit} className="btn-primary">Edit</button>
+                            <button onClick={this.remove} className="btn-danger">Remove</button>
+                            <br/>
+                            <button onClick={this.gerilet} className="btn-default">Prev</button>
+                            <button onClick={this.ilerlet} className="btn-default">Next</button>
+                        </div>
+
+                        <br/>
+                    </div>
+            );
+        },
+        editingMode: function () {
+            return (
+                    <div className="Task">
+                        <div className="container">
+                            <textarea ref="yaziAlani" defaultValue={this.props.children}></textarea>
+                        </div>
+                        <div className="container">
+                            <button onClick={this.save} className="btn-danger">Save</button>
+                        </div>
+                    </div>
+            );
+        },
+        render: function () {
+            if(this.state.editing){
+                return this.editingMode();
+            }else{
+                return this.normalMode();
+            }
+        }
+    });
+    var TaskBoard = React.createClass({
+        getInitialState: function () {
+            return{
+                notStarted: [
+                    'CS 101 - Assignment4',
+                    'CS 232 - Final Çalışması'
+                ],
+                inProcess: [
+                    'CS 204 - Assignment 5'
+                ],
+                finished: [
+                    'CS 401 - Final Çalışması',
+                    'MAT 254 - Final Çalışması'
+                ]
+            }
+        },
+        yeniTaskEkle: function () {
+            var taskArr = this.state.notStarted;
+            taskArr.push(this.refs.yeniTaskTextAlanı.value);
+            this.setState({
+                notStarted: taskArr
+            });
+        },
+        bileseniGüncelle: function (yeniText, index, durum) {
+            var taskArr;
+            if(durum == "notStarted"){
+                taskArr = this.state.notStarted;
+                taskArr[index] = yeniText;
+                this.setState({
+                    notStarted: taskArr
+                });
+            }else if(durum =="inProcess"){
+                taskArr = this.state.inProcess;
+                taskArr[index] = yeniText;
+                this.setState({
+                    inProcess: taskArr
+                });
+            }else if(durum == "finished"){
+                taskArr = this.state.finished;
+                taskArr[index] = yeniText;
+                this.setState({
+                    finished: taskArr
+                });
+            }
+        },
+        bileseniSil: function (index, durum) {
+
+            var taskArr;
+            if(durum == "notStarted"){
+                taskArr = this.state.notStarted;
+                taskArr.splice(index,1);
+                this.setState({
+                    notStarted: taskArr
+                });
+            }else if(durum == "inProcess"){
+                taskArr = this.state.inProcess;
+                taskArr.splice(index,1);
+                this.setState({
+                    inProcess: taskArr
+                });
+            }else if(durum == "finished"){
+                taskArr = this.state.finished;
+                taskArr.splice(index,1);
+                this.setState({
+                    finished: taskArr
+                });
+            }
+        },
+        bileseniIlerlet: function (index, durum) {
+            if(durum == "finished"){
+                alert("Daha ilerleyemez");
+                return;
+            }
+
+
+            if(durum == "notStarted"){
+                var taskArr1 = this.state.notStarted;
+                var text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    notStarted: taskArr1
+                });
+                var taskArr2 = this.state.inProcess;
+                taskArr2.push(text);
+                this.setState({
+                    inProcess: taskArr2
+                });
+            }else if(durum == "inProcess"){
+                var taskArr1 = this.state.inProcess;
+                var text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    inProcess: taskArr1
+                });
+                var taskArr2 = this.state.finished;
+                taskArr2.push(text);
+                this.setState({
+                    finished: taskArr2
+                });
+            }
+        },
+        bileseniGerilet: function (index, durum) {
+            if(durum == "notStarted"){
+                alert("Daha gerileyemez");
+                return;
+            }
+
+            var taskArr1;
+            var text;
+            var taskArr2;
+            if(durum == "finished"){
+                taskArr1 = this.state.finished;
+                text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    finished: taskArr1
+                });
+                taskArr2 = this.state.inProcess;
+                taskArr2.push(text);
+                this.setState({
+                    inProcess: taskArr2
+                });
+            }else if(durum == "inProcess"){
+                taskArr1 = this.state.inProcess;
+                text = taskArr1[index];
+                taskArr1.splice(index,1);
+                this.setState({
+                    inProcess: taskArr1
+                });
+                taskArr2 = this.state.notStarted;
+                taskArr2.push(text);
+                this.setState({
+                    notStarted: taskArr2
+                });
+            }
+        },
+        getTaskNotStarted: function (taskText, i) {
+            return (<Task durum="notStarted" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
+        },
+        getTaskInProcess: function (taskText, i) {
+            return (<Task durum="inProcess" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
+        },
+        getTaskFinished: function (taskText, i) {
+            return (<Task durum="finished" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
+        },
+        render: function () {
+            return (
+                    <div className="container">
+                        <div className="row">
+                            <div className="text-center">
+                                <textarea  defaultValue="Yeni Task" ref="yeniTaskTextAlanı"></textarea>
+                                <br/>
+                                <button onClick={this.yeniTaskEkle} className="btn-lg">Add New Task</button>
+
+                            </div>
+                        </div>
+
+                        <br/>
+                        <div className="container">
+                            <div className="col-xs-4">
+                                <h2 className="text-danger">Not Started</h2>
+                                <div className="TaskTable">
+                                    {
+                                        this.state.notStarted.map(this.getTaskNotStarted)
+                                    }
+                                </div>
+                            </div>
+                            <div className="col-xs-4">
+                                <h2 className="text-danger">In Process</h2>
+                                <div className="TaskTable">
+                                    {
+                                        this.state.inProcess.map(this.getTaskInProcess)
+                                    }
+                                </div>
+                            </div>
+                            <div className="col-xs-4">
+                                <h2 className="text-danger">Finished</h2>
+                                <div className="TaskTable">
+                                    {
+                                        this.state.finished.map(this.getTaskFinished)
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            );
+        }
+    });
+
+
+    ReactDOM.render(<TaskBoard/>, document.getElementById("board"));
+</script>
+</body>
+</html>
+```
+
+**Sonuç görüntülerimiz:**
 
 
 
