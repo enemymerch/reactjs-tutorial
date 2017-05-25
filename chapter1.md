@@ -47,7 +47,5 @@ Takip edebilmeniz için kendi projemin görüntüsü:
 
 ![](/assets/5.png)
 
-
-
-ReactJS'i iki şekilde geliştirebilirsiniz. Bu yöntemlerden biri sadece .js uzantılı dosyalar kodlayarak, ikincisi ise yazacağımız kodu .html uzantılı dosyanın içerisine gömerek. Ben bu tutorial da ikinci yöntemi kullanacağım.
+ReactJS'i iki şekilde geliştirebilirsiniz. Bu yöntemlerden biri sadece .js ve .jsx uzantılı dosyalar kodlayarak ve compile ederek, ikincisi ise yazacağımız kodu .html uzantılı dosyanın içerisine gömerek. Ben bu tutorial da ikinci yöntemi kullanacağım.
 
