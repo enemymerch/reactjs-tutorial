@@ -17,7 +17,7 @@ Gerekli bootstrap ve js linklerini projemize ekleyelim.
     <script src="../js/browser.min.js"></script>
 ```
 
-Önceli başlıklarda kullandığımız _main.css _dosyasını artık kullanmayacağız.
+Önceli başlıklarda kullandığımız \_main.css \_dosyasını artık kullanmayacağız.
 
 Ayrıca görünüş'ü biraz daha özelleştirebilmek için küçük bir css kodu eklememiz gerekiyor sayfamıza
 
@@ -41,17 +41,13 @@ Ayrıca görünüş'ü biraz daha özelleştirebilmek için küçük bir css kod
             padding: 3%;
         }
     </style>
-
 ```
 
 Sonrasında sayfamızın **body** kısmını güncellememiz gerekiyor.
 
 Yeni **Body **kısmı:
 
-
-
 ```
-
     <div class="container">
 
             <h1 class="text-center text-primary" >ReactJS Beginner Tutorial</h1>
@@ -63,12 +59,10 @@ Yeni **Body **kısmı:
             <div style="margin-top: 10%" id="board" >
 
             </div>
-    </div> 
+    </div>
 ```
 
 **board** id'li div elementi ReactJS bileşenlerinin render edileceği bölüm olacak.
-
-
 
 #### Proje Yapısı
 
@@ -78,7 +72,7 @@ Yeni **Body **kısmı:
 
 Yeni **getInitialState** fonksiyonu:
 
-```
+```js
         getInitialState: function () {
             return{
                 notStarted: [
@@ -104,7 +98,7 @@ Sonrasında her Task listesini ayrı ayrı render edebilmek için önceden kulla
 
 Yeni task fonksiyonları:
 
-```
+```js
         getTaskNotStarted: function (taskText, i) {
             return (<Task durum="notStarted" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
         },
@@ -115,8 +109,6 @@ Yeni task fonksiyonları:
             return (<Task durum="finished" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
         }
 ```
-
-
 
 
 
