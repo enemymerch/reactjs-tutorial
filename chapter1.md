@@ -1,6 +1,6 @@
 # Çevreyi Kurmak
 
-#### 1. Yöntem
+
 
 * [npm.com](https://www.gitbook.com/book/enemymerch/test/edit#)'dan Node.js ile beraber npm'i yükle.
 
@@ -20,23 +20,25 @@ Bu yöntem ile direk olarak bir ReactJS projesi oluşturmuş oluyoruz.
 
 Detaylı kurulum için [ github.com/facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app) adresine göz atabilirsiniz.
 
-#### 2.Yöntem
+#### 1.Yöntem
 
-HTML sayfasına bu script linklerini ekleyerek ReactJS'i kullanabiliriz.
+Gerekli olan ReactJS dosyalarını bilgisayarınıza [buradan](https://www.gitbook.com/book/enemymerch/reactjs-tutorial/edit#) indirdikten sonra npm ile oluşturduğunuz projenin altındaki src klasörüne
+
+.js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanabilirsiniz.
 
 ```html
 <!-- reactJS'in kendi kütüphanesi -->
-<script src="https://unpkg.com/react@latest/dist/react.js"></script>
+<script src="../js/react.min.js"></script>
 ```
 
 ```html
 <!-- reactJS'in DOM kütüaphanesi -->
-<script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+<script src="../js/react-dom.min.js"></script>
 ```
 
 ```html
 <!-- JSX'i javascript'e çeviren eden babel kütüphanesi -->
-<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="../js/browser.min.js"></script>
 ```
 
 #### 3.Yöntem
@@ -46,8 +48,4 @@ Gerekli olan ReactJS dosyalarını bilgisayarınıza indirdikten sonra npm ile o
 .js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanmak.
 
 Dosyaları [buradan](https://drive.google.com/drive/folders/0BxLeFDQhe16BQWhxQllicnktNWM?usp=sharing) indirip projenizin altına ekleyebilirsiniz.
-
-
-
-
 
