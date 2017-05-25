@@ -2,7 +2,7 @@
 
 Bu başlıkta yeni Task bileşenlerini dinamik olarak nasıl ekleyebileceğimizi öğreneceğiz.
 
-Bundan dolayı TaskBoard bileşenimize yeni bir textarea ve buttun elementi eklememiz gerekiyor. 
+Bundan dolayı TaskBoard bileşenimize yeni bir textarea ve buttun elementi eklememiz gerekiyor.
 
 TaskBoard bileşeninin yeni render fonksiyonu:
 
@@ -23,7 +23,21 @@ TaskBoard bileşeninin yeni render fonksiyonu:
         }
 ```
 
-Üstte gördüğümüz gibi textarea elementine "yeni TaskTextAlanı" adıyla bir referans verdik.
+Üstte gördüğümüz gibi textarea elementine _**yeni TaskTextAlanı**_ adıyla bir referans verdik.
 
 Şimdide Yeni bileşeni eklememizi sağlayacak fonksiyonumuzu yazmamız gerekiyor.
+
+```js
+        yeniTaskEkle: function () {
+            var taskArr = this.state.tasks;
+            taskArr.push(this.refs.yeniTaskTextAlanı.value);
+            this.setState({
+                tasks: taskArr
+            });
+        }
+```
+
+**yeniTaskEkle** fonksiyonu ile referans verdiğimiz textarea elementinin değerini alıyoruz. Ve yeni Task bileşenimizi oluşturuyoruz.
+
+
 
