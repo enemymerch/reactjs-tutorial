@@ -699,11 +699,9 @@ Son değişkliğimiz de Task bileşeninin **normalMode **ve **editingMode** fonk
 
 1.İlk görüntü![](assets/1.png)
 
-2. _CS 404 - Final Çalışması_ adlı Yeni bir Task ekliyoruz.
+1. _CS 404 - Final Çalışması_ adlı Yeni bir Task ekliyoruz.
 
 ![](assets/2.png)
-
-
 
 3.Not Started listesinde olan _ CS 101 - Assignment4 _ Task'ının Next butonuna tıkalayarak, In Process listesine gönderiyoruz.
 
@@ -711,5 +709,5 @@ Son değişkliğimiz de Task bileşeninin **normalMode **ve **editingMode** fonk
 
 Ve böylelikle ReactJS Beginner Tutorial'ımızın sonuna geldik. Tutorial'ımız ile birlikte küçük bir Task Yönetim Sayfası oluşturduk.
 
-ReactJS'in daha bize front-end tasarlarken kazandırdığı bir çok kolaylık var. Ama faydalarıyla beraber bazı dezavantajlarıda var. Farkındaysanız, projemizde sadece iki tane bileşenimiz\(TaskBoard ve Task\) vardı. Ama bu bileşenleri bile kontrol edebilmek proje büyüdükçe ve bileşen sayısı arttıkça zorlaşıyor. Bundan dolayı bileşenleri tek bir hiyerarşi altına toplayabilmek ve bileşenlere düzenli bir life cycle sağlayan [**Redux**](http://redux.js.org/docs/introduction/) adında ReactJS ile çalışan farklı bir framework var. Eğer ReactJS ile kontorü zorlaşacak projelere başlamadan önce [**Redux Framework**](http://redux.js.org/docs/introduction/)'e bakmanızı tavsiye ederim.
+ReactJS'in daha bize front-end tasarlarken kazandırdığı bir çok kolaylık var. Ama faydalarıyla beraber bazı dezavantajlarıda var. Farkındaysanız, projemizde sadece iki tane bileşenimiz\(TaskBoard ve Task\) vardı. Ama bu bileşenleri bile kontrol edebilmek proje büyüdükçe ve bileşen sayısı arttıkça zorlaşıyor. Bundan dolayı bileşenleri tek bir hiyerarşi altına toplayan ve bileşenlere düzenli bir life cycle sağlayan [**Redux**](http://redux.js.org/docs/introduction/) adında ReactJS ile çalışan farklı bir framework var. Eğer ReactJS ile proje geliştirmeyi düşünüyorsanız, projeye başlamadan önce [**Redux Framework**](http://redux.js.org/docs/introduction/)'e bakmanızı tavsiye ederim.
 
