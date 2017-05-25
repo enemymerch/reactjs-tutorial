@@ -14,4 +14,5 @@
 * [Çocuk Bileşenleri Yönetme 1](cocuk-bilesenleri-yonetme.md)
 * [Çocuk Bileşenleri Yönetme 2](cocuk-bilesenleri-yonetme-2.md)
 * [Çocuk Bileşenleri Yönetme 3](cocuk-bilesenseri-yonetme-3.md)
+* [Projeyi Bitirirken](projeyi-bitirirken.md)
 

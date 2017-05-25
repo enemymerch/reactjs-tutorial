@@ -1,0 +1,122 @@
+# Projeyi Bitirirken
+
+Bu son başlığımız ve bu başlıkta şu an'a kadar öğrendiklerimiz ile düzgün çalışan bir Task Yönetim sayfası hazırlayacağız.
+
+İlk önce sayfamıza düzen ve biraz renk vermesi için [_Bootstrap_](http://getbootstrap.com/)'i kullanacağız. Bootstrap'i kendi sitesinden indirip kullanabilirsiniz. İsterseniz de bu [link'te](https://drive.google.com/drive/folders/0BxLeFDQhe16BcFdvNk5VcnZkckE?usp=sharing) kendi projem için kullandığım css, fonts ve js klasörlerine erişebilirsiniz.
+
+Gerekli bootstrap ve js linklerini projemize ekleyelim.
+
+```html
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Other Js links-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- ReactJS Links -->
+    <script src="../js/react.min.js"></script>
+    <script src="../js/react-dom.min.js"></script>
+    <script src="../js/browser.min.js"></script>
+```
+
+Önceli başlıklarda kullandığımız _main.css _dosyasını artık kullanmayacağız.
+
+Ayrıca görünüş'ü biraz daha özelleştirebilmek için küçük bir css kodu eklememiz gerekiyor sayfamıza
+
+```html
+    <style>
+        body{
+            background-color: #9acfea;
+            font-family: "Comic Sans MS";
+        }
+        .Task{
+            background-color: #9acfea;
+            border-color: #1b6d85;
+            border: medium;
+            border-style: double;
+            margin: 3%;
+            padding: 3%;
+        }
+        .TaskBoard{
+            background-color: #2ecc71;
+            margin: 3%;
+            padding: 3%;
+        }
+    </style>
+
+```
+
+Sonrasında sayfamızın **body** kısmını güncellememiz gerekiyor.
+
+Yeni **Body **kısmı:
+
+
+
+```
+
+    <div class="container">
+
+            <h1 class="text-center text-primary" >ReactJS Beginner Tutorial</h1>
+            <h2 class="text-center text-primary"> Task Yönetim Sistemi</h2>
+
+            <br/>
+            <br/>
+
+            <div style="margin-top: 10%" id="board" >
+
+            </div>
+    </div> 
+```
+
+**board** id'li div elementi ReactJS bileşenlerinin render edileceği bölüm olacak.
+
+
+
+#### Proje Yapısı
+
+Önceki başlıklarda TaskBoard bileşenimizin içerisinde Task bileşenlerini tutan bir tane task listesi\(_this.state.tasks_\) vardı. Projemiz  başlıca üç farklı Task başlığı altında toplanacak. Bunlar **notStarted, inProcess **ve **finished**. Yani her başlık için ayrı task listesi tutacağız. Bundan dolayı TaskBoard bileşenimizin içerisindeki fonksiyonları güncellememiz gerekicek.
+
+İlk önce **getInitialState** fonksiyonumuzu değiştireceğiz.
+
+Yeni **getInitialState** fonksiyonu:
+
+```
+        getInitialState: function () {
+            return{
+                notStarted: [
+                    'Task 1',
+                    'Task 2',
+                    'Task 3'
+                ],
+                inProcess: [
+                    'Task 1',
+                    'Task 2',
+                    'Task 3'
+                ],
+                finished: [
+                    'Task 1',
+                    'Task 2',
+                    'Task 3'
+                ]
+            }
+        }
+```
+
+Sonrasında her Task listesini ayrı ayrı render edebilmek için önceden kullandığımız **getTask** fonksiyonunu silip her list'e için yeni fonksiyon yazıcağız.
+
+Yeni task fonksiyonları:
+
+```
+        getTaskNotStarted: function (taskText, i) {
+            return (<Task durum="notStarted" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
+        },
+        getTaskInProcess: function (taskText, i) {
+            return (<Task durum="inProcess" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
+        },
+        getTaskFinished: function (taskText, i) {
+            return (<Task durum="finished" index={i} prev={this.bileseniGerilet} next={this.bileseniIlerlet} save={this.bileseniGüncelle} delete={this.bileseniSil}>{taskText}</Task>);
+        }
+```
+
+
+
+
+
