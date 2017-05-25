@@ -20,8 +20,6 @@ Bu yöntem ile direk olarak bir ReactJS projesi oluşturmuş oluyoruz.
 
 Detaylı kurulum için [ github.com/facebookincubator/create-react-app](https://github.com/facebookincubator/create-react-app) adresine göz atabilirsiniz.
 
-
-
 Gerekli olan ReactJS dosyalarını bilgisayarınıza [buradan](https://www.gitbook.com/book/enemymerch/reactjs-tutorial/edit#) indirdikten sonra npm ile oluşturduğunuz projeyi Web Strom ile açın. Projenin altındaki src klasörüne .js uzantılı dosyaları ekleyip HTML sayfanızda local olarak kullanabilirsiniz.
 
 ```html
@@ -43,7 +41,13 @@ Gerekli olan ReactJS dosyalarını bilgisayarınıza [buradan](https://www.gitbo
 
 #### 2.Yöntem\(Web Strom\)
 
-Web Strom editörü ile direk olarak React projesi oluşturarak devam edebilirsiniz.
+Web Strom editörü ile direk olarak React projesi oluşturarak devam edebilirsiniz.![](/assets/4.png)
+
+Takip edebilmeniz için kendi projemin görüntüsü:
+
+![](/assets/5.png)
 
 
+
+ReactJS'i iki şekilde geliştirebilirsiniz. Bu yöntemlerden biri sadece .js uzantılı dosyalar kodlayarak, ikincisi ise yazacağımız kodu .html uzantılı dosyanın içerisine gömerek. Ben bu tutorial da ikinci yöntemi kullanacağım.
 
